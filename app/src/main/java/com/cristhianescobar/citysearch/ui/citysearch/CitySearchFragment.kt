@@ -6,7 +6,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.lifecycle.Observer
 import com.cristhianescobar.citysearch.R
+import com.cristhianescobar.citysearch.api.Result
+import com.cristhianescobar.codegen.ws.models.VenuesResponse
 
 class CitySearchFragment : Fragment() {
 
@@ -22,6 +26,18 @@ class CitySearchFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProviders.of(this).get(CitySearchViewModel::class.java)
+        viewModel.nearByVenues.observe(viewLifecycleOwner, Observer<Result<VenuesResponse>> {
+            when(it) {
+                is Result.Success -> {
+                    Toast.makeText(context, "Data? ${it.data.response.venues.map { it.name }}", Toast.LENGTH_SHORT).show()
+                }
+                is Result.Error -> {
+                    Toast.makeText(context, "Error?", Toast.LENGTH_SHORT).show()
+                }
+            }
+        })
+
+        viewModel.getVenuesNear()
     }
 
 }

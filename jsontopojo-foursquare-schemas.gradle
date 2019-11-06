@@ -25,7 +25,7 @@ jsonSchema2Pojo {
 
     // Package name used for generated Java classes (for types where a fully qualified name has not
     // been supplied in the schema using the 'javaType' property).
-    targetPackage = 'com.cristhianescobar.citysearch.ws.model.generated.foursquare'
+    targetPackage = 'com.cristhianescobar.codegen.ws.models'
 
     // The characters that should be considered as word delimiters when creating Java Bean property
     // names from JSON property names. If blank or not set, JSON properties will be considered to
