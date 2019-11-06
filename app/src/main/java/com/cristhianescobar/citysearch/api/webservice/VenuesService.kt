@@ -1,7 +1,7 @@
 package com.cristhianescobar.citysearch.api.webservice
 
 import com.cristhianescobar.citysearch.BuildConfig
-import com.cristhianescobar.codegen.ws.models.VenuesResponse
+import com.cristhianescobar.codegen.ws.models.venue.VenuesResponse
 
 class VenuesService(private val venuesServiceAPI: VenuesServiceAPI) {
 

@@ -1,5 +1,5 @@
 
-package com.cristhianescobar.codegen.ws.models;
+package com.cristhianescobar.codegen.ws.models.typeahead;
 
 
 
@@ -9,7 +9,7 @@ package com.cristhianescobar.codegen.ws.models;
  * 
  * 
  */
-public class VenuesResponse {
+public class SuggestCompletionResponse {
 
     /**
      * The Meta Schema

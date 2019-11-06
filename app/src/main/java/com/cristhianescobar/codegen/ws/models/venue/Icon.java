@@ -1,5 +1,5 @@
 
-package com.cristhianescobar.codegen.ws.models;
+package com.cristhianescobar.codegen.ws.models.venue;
 
 
 

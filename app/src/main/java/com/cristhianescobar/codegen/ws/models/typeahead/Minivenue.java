@@ -1,6 +1,7 @@
 
-package com.cristhianescobar.codegen.ws.models;
+package com.cristhianescobar.codegen.ws.models.typeahead;
 
+import java.util.List;
 
 
 /**
@@ -9,7 +10,7 @@ package com.cristhianescobar.codegen.ws.models;
  * 
  * 
  */
-public class Category {
+public class Minivenue {
 
     /**
      * The Id Schema
@@ -30,41 +31,32 @@ public class Category {
     @com.squareup.moshi.Json(name = "name")
     private String name = "";
     /**
-     * The Pluralname Schema
+     * The Location Schema
      * <p>
      * 
      * (Required)
      * 
      */
-    @com.squareup.moshi.Json(name = "pluralName")
-    private String pluralName = "";
+    @com.squareup.moshi.Json(name = "location")
+    private Location location;
     /**
-     * The Shortname Schema
+     * The Categories Schema
      * <p>
      * 
      * (Required)
      * 
      */
-    @com.squareup.moshi.Json(name = "shortName")
-    private String shortName = "";
+    @com.squareup.moshi.Json(name = "categories")
+    private List<Category> categories = null;
     /**
-     * The Icon Schema
+     * The Hasperk Schema
      * <p>
      * 
      * (Required)
      * 
      */
-    @com.squareup.moshi.Json(name = "icon")
-    private Icon icon;
-    /**
-     * The Primary Schema
-     * <p>
-     * 
-     * (Required)
-     * 
-     */
-    @com.squareup.moshi.Json(name = "primary")
-    private boolean primary = false;
+    @com.squareup.moshi.Json(name = "hasPerk")
+    private boolean hasPerk = false;
 
     /**
      * The Id Schema
@@ -111,91 +103,69 @@ public class Category {
     }
 
     /**
-     * The Pluralname Schema
+     * The Location Schema
      * <p>
      * 
      * (Required)
      * 
      */
-    public String getPluralName() {
-        return pluralName;
+    public Location getLocation() {
+        return location;
     }
 
     /**
-     * The Pluralname Schema
+     * The Location Schema
      * <p>
      * 
      * (Required)
      * 
      */
-    public void setPluralName(String pluralName) {
-        this.pluralName = pluralName;
+    public void setLocation(Location location) {
+        this.location = location;
     }
 
     /**
-     * The Shortname Schema
+     * The Categories Schema
      * <p>
      * 
      * (Required)
      * 
      */
-    public String getShortName() {
-        return shortName;
+    public List<Category> getCategories() {
+        return categories;
     }
 
     /**
-     * The Shortname Schema
+     * The Categories Schema
      * <p>
      * 
      * (Required)
      * 
      */
-    public void setShortName(String shortName) {
-        this.shortName = shortName;
+    public void setCategories(List<Category> categories) {
+        this.categories = categories;
     }
 
     /**
-     * The Icon Schema
+     * The Hasperk Schema
      * <p>
      * 
      * (Required)
      * 
      */
-    public Icon getIcon() {
-        return icon;
+    public boolean isHasPerk() {
+        return hasPerk;
     }
 
     /**
-     * The Icon Schema
+     * The Hasperk Schema
      * <p>
      * 
      * (Required)
      * 
      */
-    public void setIcon(Icon icon) {
-        this.icon = icon;
-    }
-
-    /**
-     * The Primary Schema
-     * <p>
-     * 
-     * (Required)
-     * 
-     */
-    public boolean isPrimary() {
-        return primary;
-    }
-
-    /**
-     * The Primary Schema
-     * <p>
-     * 
-     * (Required)
-     * 
-     */
-    public void setPrimary(boolean primary) {
-        this.primary = primary;
+    public void setHasPerk(boolean hasPerk) {
+        this.hasPerk = hasPerk;
     }
 
 }

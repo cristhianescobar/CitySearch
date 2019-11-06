@@ -1,7 +1,6 @@
 
-package com.cristhianescobar.codegen.ws.models;
+package com.cristhianescobar.codegen.ws.models.typeahead;
 
-import java.util.List;
 
 
 /**
@@ -10,7 +9,7 @@ import java.util.List;
  * 
  * 
  */
-public class Venue {
+public class Category {
 
     /**
      * The Id Schema
@@ -31,32 +30,32 @@ public class Venue {
     @com.squareup.moshi.Json(name = "name")
     private String name = "";
     /**
-     * The Location Schema
+     * The Pluralname Schema
      * <p>
      * 
      * (Required)
      * 
      */
-    @com.squareup.moshi.Json(name = "location")
-    private Location location;
+    @com.squareup.moshi.Json(name = "pluralName")
+    private String pluralName = "";
     /**
-     * The Categories Schema
+     * The Shortname Schema
      * <p>
      * 
      * (Required)
      * 
      */
-    @com.squareup.moshi.Json(name = "categories")
-    private List<Category> categories = null;
+    @com.squareup.moshi.Json(name = "shortName")
+    private String shortName = "";
     /**
-     * The Venuepage Schema
+     * The Icon Schema
      * <p>
      * 
      * (Required)
      * 
      */
-    @com.squareup.moshi.Json(name = "venuePage")
-    private VenuePage venuePage;
+    @com.squareup.moshi.Json(name = "icon")
+    private Icon icon;
 
     /**
      * The Id Schema
@@ -103,69 +102,69 @@ public class Venue {
     }
 
     /**
-     * The Location Schema
+     * The Pluralname Schema
      * <p>
      * 
      * (Required)
      * 
      */
-    public Location getLocation() {
-        return location;
+    public String getPluralName() {
+        return pluralName;
     }
 
     /**
-     * The Location Schema
+     * The Pluralname Schema
      * <p>
      * 
      * (Required)
      * 
      */
-    public void setLocation(Location location) {
-        this.location = location;
+    public void setPluralName(String pluralName) {
+        this.pluralName = pluralName;
     }
 
     /**
-     * The Categories Schema
+     * The Shortname Schema
      * <p>
      * 
      * (Required)
      * 
      */
-    public List<Category> getCategories() {
-        return categories;
+    public String getShortName() {
+        return shortName;
     }
 
     /**
-     * The Categories Schema
+     * The Shortname Schema
      * <p>
      * 
      * (Required)
      * 
      */
-    public void setCategories(List<Category> categories) {
-        this.categories = categories;
+    public void setShortName(String shortName) {
+        this.shortName = shortName;
     }
 
     /**
-     * The Venuepage Schema
+     * The Icon Schema
      * <p>
      * 
      * (Required)
      * 
      */
-    public VenuePage getVenuePage() {
-        return venuePage;
+    public Icon getIcon() {
+        return icon;
     }
 
     /**
-     * The Venuepage Schema
+     * The Icon Schema
      * <p>
      * 
      * (Required)
      * 
      */
-    public void setVenuePage(VenuePage venuePage) {
-        this.venuePage = venuePage;
+    public void setIcon(Icon icon) {
+        this.icon = icon;
     }
 
 }

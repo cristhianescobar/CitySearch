@@ -10,7 +10,7 @@ import android.widget.Toast
 import androidx.lifecycle.Observer
 import com.cristhianescobar.citysearch.R
 import com.cristhianescobar.citysearch.api.Result
-import com.cristhianescobar.codegen.ws.models.VenuesResponse
+import com.cristhianescobar.codegen.ws.models.venue.VenuesResponse
 
 class CitySearchFragment : Fragment() {
 
@@ -36,7 +36,6 @@ class CitySearchFragment : Fragment() {
                 }
             }
         })
-
         viewModel.getVenuesNear()
     }
 

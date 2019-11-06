@@ -6,10 +6,10 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.cristhianescobar.citysearch.api.repository.VenuesRepository
-import com.cristhianescobar.codegen.ws.models.VenuesResponse
 import kotlinx.coroutines.launch
 import org.koin.android.ext.android.inject
 import com.cristhianescobar.citysearch.api.Result
+import com.cristhianescobar.codegen.ws.models.venue.VenuesResponse
 
 class CitySearchViewModel(application: Application) : AndroidViewModel(application) {
     private val searchVenuesRepository: VenuesRepository by application.inject()

@@ -1,6 +1,6 @@
 package com.cristhianescobar.citysearch.api.webservice
 
-import com.cristhianescobar.codegen.ws.models.VenuesResponse
+import com.cristhianescobar.codegen.ws.models.venue.VenuesResponse
 import retrofit2.http.GET
 import retrofit2.http.Query
 
@@ -19,6 +19,5 @@ interface VenuesServiceAPI {
         @Query("near") place: String,
         @Query("query") query: String,
         @Query("v") versioning: String
-
     ): VenuesResponse
 }

@@ -4,9 +4,9 @@ import android.app.Application
 import android.util.Log
 import com.cristhianescobar.citysearch.api.repository.VenuesRepository
 import com.cristhianescobar.citysearch.api.webservice.VenuesService
-import com.cristhianescobar.codegen.ws.models.VenuesResponse
 import org.koin.android.ext.android.inject
 import com.cristhianescobar.citysearch.api.Result
+import com.cristhianescobar.codegen.ws.models.venue.VenuesResponse
 import retrofit2.HttpException
 
 
