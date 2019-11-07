@@ -12,6 +12,7 @@
     "meta": {
       "$id": "#/properties/meta",
       "type": "object",
+      "javaType" : "com.cristhianescobar.codegen.ws.models.typeahead.Meta",
       "title": "The Meta Schema",
       "required": [
         "code",
@@ -42,6 +43,7 @@
     "response": {
       "$id": "#/properties/response",
       "type": "object",
+      "javaType" : "com.cristhianescobar.codegen.ws.models.typeahead.Response",
       "title": "The Response Schema",
       "required": [
         "venues"
@@ -86,6 +88,7 @@
               "location": {
                 "$id": "#/properties/response/properties/venues/items/properties/location",
                 "type": "object",
+                "javaType" : "com.cristhianescobar.codegen.ws.models.typeahead.Location",
                 "title": "The Location Schema",
                 "required": [
                   "address",
@@ -270,6 +273,7 @@
                 "items": {
                   "$id": "#/properties/response/properties/venues/items/properties/categories/items",
                   "type": "object",
+                  "javaType" : "com.cristhianescobar.codegen.ws.models.typeahead.Category",
                   "title": "The Items Schema",
                   "required": [
                     "id",
@@ -323,6 +327,7 @@
                     "icon": {
                       "$id": "#/properties/response/properties/venues/items/properties/categories/items/properties/icon",
                       "type": "object",
+                      "javaType" : "com.cristhianescobar.codegen.ws.models.typeahead.Icon",
                       "title": "The Icon Schema",
                       "required": [
                         "prefix",

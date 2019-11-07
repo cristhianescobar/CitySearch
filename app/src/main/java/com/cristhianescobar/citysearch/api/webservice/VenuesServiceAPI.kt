@@ -1,6 +1,7 @@
 package com.cristhianescobar.citysearch.api.webservice
 
-import com.cristhianescobar.codegen.ws.models.venue.VenuesResponse
+import com.cristhianescobar.codegen.ws.models.typeahead.SuggestedResponse
+import com.cristhianescobar.codegen.ws.models.typeahead.VenuesResponse
 import retrofit2.http.GET
 import retrofit2.http.Query
 
@@ -16,8 +17,19 @@ interface VenuesServiceAPI {
     suspend fun getVenuesNearBy(
         @Query("client_id") clientId: String,
         @Query("client_secret") clientSecret: String,
-        @Query("near") place: String,
+        @Query("near") near: String,
         @Query("query") query: String,
         @Query("v") versioning: String
     ): VenuesResponse
+
+    @GET("v2/venues/suggestcompletion")
+    suspend fun getSuggestedVenues(
+        @Query("client_id") clientId: String,
+        @Query("client_secret") clientSecret: String,
+        @Query("near") near: String,
+        @Query("query") searchWord: String,
+        @Query("v") versioning: String
+    ): SuggestedResponse
+
+
 }

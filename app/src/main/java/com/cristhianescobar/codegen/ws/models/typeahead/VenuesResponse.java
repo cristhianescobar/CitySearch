@@ -9,7 +9,7 @@ package com.cristhianescobar.codegen.ws.models.typeahead;
  * 
  * 
  */
-public class SuggestCompletionResponse {
+public class VenuesResponse {
 
     /**
      * The Meta Schema

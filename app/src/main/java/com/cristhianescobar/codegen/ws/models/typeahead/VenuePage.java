@@ -1,5 +1,5 @@
 
-package com.cristhianescobar.codegen.ws.models.venue;
+package com.cristhianescobar.codegen.ws.models.typeahead;
 
 import com.squareup.moshi.Json;
 

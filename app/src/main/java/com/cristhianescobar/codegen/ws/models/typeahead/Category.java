@@ -48,6 +48,14 @@ public class Category {
     @com.squareup.moshi.Json(name = "shortName")
     private String shortName = "";
     /**
+     * The Hasperk Schema
+     * <p>
+     * 
+     * 
+     */
+    @com.squareup.moshi.Json(name = "primary")
+    private boolean primary = false;
+    /**
      * The Icon Schema
      * <p>
      * 
@@ -143,6 +151,26 @@ public class Category {
      */
     public void setShortName(String shortName) {
         this.shortName = shortName;
+    }
+
+    /**
+     * The Hasperk Schema
+     * <p>
+     * 
+     * 
+     */
+    public boolean isPrimary() {
+        return primary;
+    }
+
+    /**
+     * The Hasperk Schema
+     * <p>
+     * 
+     * 
+     */
+    public void setPrimary(boolean primary) {
+        this.primary = primary;
     }
 
     /**

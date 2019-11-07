@@ -3,6 +3,7 @@ package com.cristhianescobar.citysearch
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.cristhianescobar.citysearch.ui.citysearch.CitySearchFragment
+import com.cristhianescobar.citysearch.ui.citysearch.VenueFragment
 
 class CitySearchActivity : AppCompatActivity() {
 
@@ -12,7 +13,7 @@ class CitySearchActivity : AppCompatActivity() {
 
         if (savedInstanceState == null) {
             supportFragmentManager.beginTransaction()
-                .replace(R.id.container, CitySearchFragment.newInstance())
+                .replace(R.id.container, VenueFragment.newInstance())
                 .commitNow()
         }
     }

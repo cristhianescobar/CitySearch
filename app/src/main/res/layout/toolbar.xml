@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.appbar.AppBarLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:padding="16dp"
+    tools:showIn="@layout/city_search_activity">
+
+    <com.google.android.material.appbar.CollapsingToolbarLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:contentScrim="?attr/colorPrimary"
+        app:expandedTitleGravity="top"
+        app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_collapseMode="pin">
+
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/searchView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/darker_gray"
+                android:tooltipText="Search City" />
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.CollapsingToolbarLayout>
+</com.google.android.material.appbar.AppBarLayout>
+
+    

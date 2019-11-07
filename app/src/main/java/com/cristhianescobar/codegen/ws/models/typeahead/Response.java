@@ -2,7 +2,6 @@
 package com.cristhianescobar.codegen.ws.models.typeahead;
 
 import java.util.List;
-import com.squareup.moshi.Json;
 
 
 /**
@@ -20,8 +19,17 @@ public class Response {
      * (Required)
      * 
      */
-    @Json(name = "minivenues")
-    private List<Minivenue> minivenues = null;
+    @com.squareup.moshi.Json(name = "minivenues")
+    private List<Venue> minivenues = null;
+    /**
+     * The Minivenues Schema
+     * <p>
+     * 
+     * (Required)
+     * 
+     */
+    @com.squareup.moshi.Json(name = "venues")
+    private List<Venue> venues = null;
 
     /**
      * The Minivenues Schema
@@ -30,7 +38,7 @@ public class Response {
      * (Required)
      * 
      */
-    public List<Minivenue> getMinivenues() {
+    public List<Venue> getMinivenues() {
         return minivenues;
     }
 
@@ -41,8 +49,30 @@ public class Response {
      * (Required)
      * 
      */
-    public void setMinivenues(List<Minivenue> minivenues) {
+    public void setMinivenues(List<Venue> minivenues) {
         this.minivenues = minivenues;
+    }
+
+    /**
+     * The Minivenues Schema
+     * <p>
+     * 
+     * (Required)
+     * 
+     */
+    public List<Venue> getVenues() {
+        return venues;
+    }
+
+    /**
+     * The Minivenues Schema
+     * <p>
+     * 
+     * (Required)
+     * 
+     */
+    public void setVenues(List<Venue> venues) {
+        this.venues = venues;
     }
 
 }

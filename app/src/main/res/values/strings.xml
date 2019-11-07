@@ -1,4 +1,5 @@
 <resources>
-    <string name="app_name">City Search</string>
+    <string name="app_name">Discover Seattle</string>
     <string name="title_activity_maps">Map</string>
+    <string name="search_hint">Search Venue</string>
 </resources>
