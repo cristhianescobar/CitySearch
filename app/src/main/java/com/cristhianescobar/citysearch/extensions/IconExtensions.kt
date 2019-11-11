@@ -14,3 +14,12 @@ fun List<Category>.getMainImageUrl(): String {
     return find { it.isPrimary }?.icon?.getImageUrl().orEmpty()
 }
 
+fun com.cristhianescobar.codegen.ws.models.venueDetails.Venue.getBestImage(): String {
+    return bestPhoto.prefix + "300x500" + bestPhoto.suffix
+}
+
+
+fun com.cristhianescobar.codegen.ws.models.venueDetails.Photos.getPhoto(): String {
+    return (groups[0].items[0].prefix + "300x500" + groups[0].items[0].suffix)
+}
+

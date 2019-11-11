@@ -14,17 +14,20 @@ import com.cristhianescobar.citysearch.MainActivity
 import com.cristhianescobar.citysearch.api.Result
 import com.cristhianescobar.citysearch.R
 import com.cristhianescobar.codegen.ws.models.typeahead.Venue
+import kotlinx.android.synthetic.main.fragment_display_near_by_places.*
 import kotlinx.android.synthetic.main.fragment_type_ahead.*
+import kotlinx.android.synthetic.main.fragment_type_ahead.list
+import kotlinx.android.synthetic.main.home_fragment.*
 
 /**
  * A simple [Fragment] subclass.
  * Activities that contain this fragment must implement the
- * [SearchResultsFragment.OnFragmentInteractionListener] interface
+ * [SearchListResultsFragment.OnFragmentInteractionListener] interface
  * to handle interaction events.
- * Use the [SearchResultsFragment.newInstance] factory method to
+ * Use the [SearchListResultsFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class SearchResultsFragment : Fragment() {
+class SearchListResultsFragment : Fragment() {
 
     private lateinit var viewModel: CitySearchViewModel
 
@@ -33,7 +36,7 @@ class SearchResultsFragment : Fragment() {
             override fun onVenueClick(venue: Venue?) {
                 venue?.let {
                     findNavController().navigate(R.id.venue_details_dest)
-                    viewModel.setVenueSelected(venue)
+                    viewModel.setVenueSelected(venue.id)
                 }
             }
         }
@@ -50,6 +53,7 @@ class SearchResultsFragment : Fragment() {
             adapter = venueRecyclerViewAdapter
         }
     }
+
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         viewModel = activity?.run {
@@ -60,7 +64,6 @@ class SearchResultsFragment : Fragment() {
             when (it) {
                 is Result.Success -> {
                     venueRecyclerViewAdapter.addVenues(it.data)
-                    Toast.makeText(context, "success", Toast.LENGTH_SHORT).show()
                 }
                 is Result.Error -> {
                     Toast.makeText(context, "Error?", Toast.LENGTH_SHORT).show()
@@ -68,8 +71,11 @@ class SearchResultsFragment : Fragment() {
             }
         })
         viewModel.searchedTerm.observe(viewLifecycleOwner, Observer<String> {
-            (activity as MainActivity).setTitle(it)
+            (activity as MainActivity).setTitle("Results for $it")
         })
 
+        map_fab?.setOnClickListener {
+            findNavController().navigate(R.id.search_map_results_dest)
+        }
     }
 }

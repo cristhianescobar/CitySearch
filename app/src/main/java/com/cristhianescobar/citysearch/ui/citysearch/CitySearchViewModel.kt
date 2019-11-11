@@ -18,13 +18,13 @@ class CitySearchViewModel(application: Application) : AndroidViewModel(applicati
     private val searchVenuesRepository: VenuesRepository by application.inject()
 
     /* Private Mutable Live Data*/
-    private val _selectedVenue = MutableLiveData<Venue>()
+    private val _selectedVenue = MutableLiveData<Result<com.cristhianescobar.codegen.ws.models.venueDetails.Venue>>()
     private val _searchedTerm = MutableLiveData<String>()
     private val _nearByVenues = MutableLiveData<Result<List<Venue>>>()
     private val _suggestedSearchTerms = MutableLiveData<Result<List<Venue>>>()
 
     /* Public Mutable Live Data*/
-    val selectedVenue: LiveData<Venue>
+    val selectedVenue: LiveData<Result<com.cristhianescobar.codegen.ws.models.venueDetails.Venue>>
         get() = _selectedVenue
     val searchedTerm: LiveData<String>
         get() = _searchedTerm
@@ -49,7 +49,10 @@ class CitySearchViewModel(application: Application) : AndroidViewModel(applicati
         }
     }
 
-    fun setVenueSelected(v : Venue) {
-        _selectedVenue.postValue(v)
+    fun setVenueSelected(venueId : String) {
+        viewModelScope.launch {
+            val venueDetails = searchVenuesRepository.getVenueDetails(venueId)
+            _selectedVenue.postValue(venueDetails)
+        }
     }
 }

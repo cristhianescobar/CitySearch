@@ -1,0 +1,2956 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "required": [
+    "meta",
+    "response"
+  ],
+  "properties": {
+    "meta": {
+      "$id": "#/properties/meta",
+      "type": "object",
+      "title": "The Meta Schema",
+      "required": [
+        "code",
+        "requestId"
+      ],
+      "properties": {
+        "code": {
+          "$id": "#/properties/meta/properties/code",
+          "type": "integer",
+          "title": "The Code Schema",
+          "default": 0,
+          "examples": [
+            200
+          ]
+        },
+        "requestId": {
+          "$id": "#/properties/meta/properties/requestId",
+          "type": "string",
+          "title": "The Requestid Schema",
+          "default": "",
+          "examples": [
+            "59a45921351e3d43b07028b5"
+          ],
+          "pattern": "^(.*)$"
+        }
+      }
+    },
+    "response": {
+      "$id": "#/properties/response",
+      "type": "object",
+      "title": "The Response Schema",
+      "required": [
+        "venue"
+      ],
+      "properties": {
+        "venue": {
+          "$id": "#/properties/response/properties/venue",
+          "type": "object",
+
+          "title": "The Venue Schema",
+          "required": [
+            "id",
+            "name",
+            "contact",
+            "location",
+            "canonicalUrl",
+            "categories",
+            "verified",
+            "stats",
+            "url",
+            "likes",
+            "rating",
+            "ratingColor",
+            "ratingSignals",
+            "beenHere",
+            "photos",
+            "description",
+            "storeId",
+            "page",
+            "hereNow",
+            "createdAt",
+            "tips",
+            "shortUrl",
+            "timeZone",
+            "listed",
+            "phrases",
+            "hours",
+            "popular",
+            "pageUpdates",
+            "inbox",
+            "venueChains",
+            "attributes",
+            "bestPhoto"
+          ],
+          "properties": {
+            "id": {
+              "$id": "#/properties/response/properties/venue/properties/id",
+              "type": "string",
+              "title": "The Id Schema",
+              "default": "",
+              "examples": [
+                "412d2800f964a520df0c1fe3"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "name": {
+              "$id": "#/properties/response/properties/venue/properties/name",
+              "type": "string",
+              "title": "The Name Schema",
+              "default": "",
+              "examples": [
+                "Central Park"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "contact": {
+              "$id": "#/properties/response/properties/venue/properties/contact",
+              "type": "object",
+              "title": "The Contact Schema",
+              "required": [
+                "phone",
+                "formattedPhone",
+                "twitter",
+                "instagram",
+                "facebook",
+                "facebookUsername",
+                "facebookName"
+              ],
+              "properties": {
+                "phone": {
+                  "$id": "#/properties/response/properties/venue/properties/contact/properties/phone",
+                  "type": "string",
+                  "title": "The Phone Schema",
+                  "default": "",
+                  "examples": [
+                    "2123106600"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "formattedPhone": {
+                  "$id": "#/properties/response/properties/venue/properties/contact/properties/formattedPhone",
+                  "type": "string",
+                  "title": "The Formattedphone Schema",
+                  "default": "",
+                  "examples": [
+                    "(212) 310-6600"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "twitter": {
+                  "$id": "#/properties/response/properties/venue/properties/contact/properties/twitter",
+                  "type": "string",
+                  "title": "The Twitter Schema",
+                  "default": "",
+                  "examples": [
+                    "centralparknyc"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "instagram": {
+                  "$id": "#/properties/response/properties/venue/properties/contact/properties/instagram",
+                  "type": "string",
+                  "title": "The Instagram Schema",
+                  "default": "",
+                  "examples": [
+                    "centralparknyc"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "facebook": {
+                  "$id": "#/properties/response/properties/venue/properties/contact/properties/facebook",
+                  "type": "string",
+                  "title": "The Facebook Schema",
+                  "default": "",
+                  "examples": [
+                    "37965424481"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "facebookUsername": {
+                  "$id": "#/properties/response/properties/venue/properties/contact/properties/facebookUsername",
+                  "type": "string",
+                  "title": "The Facebookusername Schema",
+                  "default": "",
+                  "examples": [
+                    "centralparknyc"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "facebookName": {
+                  "$id": "#/properties/response/properties/venue/properties/contact/properties/facebookName",
+                  "type": "string",
+                  "title": "The Facebookname Schema",
+                  "default": "",
+                  "examples": [
+                    "Central Park"
+                  ],
+                  "pattern": "^(.*)$"
+                }
+              }
+            },
+            "location": {
+              "$id": "#/properties/response/properties/venue/properties/location",
+              "type": "object",
+              "title": "The Location Schema",
+              "required": [
+                "address",
+                "crossStreet",
+                "lat",
+                "lng",
+                "postalCode",
+                "cc",
+                "city",
+                "state",
+                "country",
+                "formattedAddress"
+              ],
+              "properties": {
+                "address": {
+                  "$id": "#/properties/response/properties/venue/properties/location/properties/address",
+                  "type": "string",
+                  "title": "The Address Schema",
+                  "default": "",
+                  "examples": [
+                    "59th St to 110th St"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "crossStreet": {
+                  "$id": "#/properties/response/properties/venue/properties/location/properties/crossStreet",
+                  "type": "string",
+                  "title": "The Crossstreet Schema",
+                  "default": "",
+                  "examples": [
+                    "5th Ave to Central Park West"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "lat": {
+                  "$id": "#/properties/response/properties/venue/properties/location/properties/lat",
+                  "type": "number",
+                  "title": "The Lat Schema",
+                  "default": 0.0,
+                  "examples": [
+                    40.78408342593807
+                  ]
+                },
+                "lng": {
+                  "$id": "#/properties/response/properties/venue/properties/location/properties/lng",
+                  "type": "number",
+                  "title": "The Lng Schema",
+                  "default": 0.0,
+                  "examples": [
+                    -73.96485328674316
+                  ]
+                },
+                "postalCode": {
+                  "$id": "#/properties/response/properties/venue/properties/location/properties/postalCode",
+                  "type": "string",
+                  "title": "The Postalcode Schema",
+                  "default": "",
+                  "examples": [
+                    "10028"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "cc": {
+                  "$id": "#/properties/response/properties/venue/properties/location/properties/cc",
+                  "type": "string",
+                  "title": "The Cc Schema",
+                  "default": "",
+                  "examples": [
+                    "US"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "city": {
+                  "$id": "#/properties/response/properties/venue/properties/location/properties/city",
+                  "type": "string",
+                  "title": "The City Schema",
+                  "default": "",
+                  "examples": [
+                    "New York"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "state": {
+                  "$id": "#/properties/response/properties/venue/properties/location/properties/state",
+                  "type": "string",
+                  "title": "The State Schema",
+                  "default": "",
+                  "examples": [
+                    "NY"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "country": {
+                  "$id": "#/properties/response/properties/venue/properties/location/properties/country",
+                  "type": "string",
+                  "title": "The Country Schema",
+                  "default": "",
+                  "examples": [
+                    "United States"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "formattedAddress": {
+                  "$id": "#/properties/response/properties/venue/properties/location/properties/formattedAddress",
+                  "type": "array",
+                  "title": "The Formattedaddress Schema",
+                  "items": {
+                    "$id": "#/properties/response/properties/venue/properties/location/properties/formattedAddress/items",
+                    "type": "string",
+                    "title": "The Items Schema",
+                    "default": "",
+                    "examples": [
+                      "59th St to 110th St (5th Ave to Central Park West)",
+                      "New York, NY 10028",
+                      "United States"
+                    ],
+                    "pattern": "^(.*)$"
+                  }
+                }
+              }
+            },
+            "canonicalUrl": {
+              "$id": "#/properties/response/properties/venue/properties/canonicalUrl",
+              "type": "string",
+              "title": "The Canonicalurl Schema",
+              "default": "",
+              "examples": [
+                "https://foursquare.com/v/central-park/412d2800f964a520df0c1fe3"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "categories": {
+              "$id": "#/properties/response/properties/venue/properties/categories",
+              "type": "array",
+              "title": "The Categories Schema",
+              "items": {
+                "$id": "#/properties/response/properties/venue/properties/categories/items",
+                "type": "object",
+                "javaType" : "com.cristhianescobar.codegen.ws.models.typeahead.Category",
+                "title": "The Items Schema",
+                "required": [
+                  "id",
+                  "name",
+                  "pluralName",
+                  "shortName",
+                  "icon",
+                  "primary"
+                ],
+                "properties": {
+                  "id": {
+                    "$id": "#/properties/response/properties/venue/properties/categories/items/properties/id",
+                    "type": "string",
+                    "title": "The Id Schema",
+                    "default": "",
+                    "examples": [
+                      "4bf58dd8d48988d163941735"
+                    ],
+                    "pattern": "^(.*)$"
+                  },
+                  "name": {
+                    "$id": "#/properties/response/properties/venue/properties/categories/items/properties/name",
+                    "type": "string",
+                    "title": "The Name Schema",
+                    "default": "",
+                    "examples": [
+                      "Park"
+                    ],
+                    "pattern": "^(.*)$"
+                  },
+                  "pluralName": {
+                    "$id": "#/properties/response/properties/venue/properties/categories/items/properties/pluralName",
+                    "type": "string",
+                    "title": "The Pluralname Schema",
+                    "default": "",
+                    "examples": [
+                      "Parks"
+                    ],
+                    "pattern": "^(.*)$"
+                  },
+                  "shortName": {
+                    "$id": "#/properties/response/properties/venue/properties/categories/items/properties/shortName",
+                    "type": "string",
+                    "title": "The Shortname Schema",
+                    "default": "",
+                    "examples": [
+                      "Park"
+                    ],
+                    "pattern": "^(.*)$"
+                  },
+                  "icon": {
+                    "$id": "#/properties/response/properties/venue/properties/categories/items/properties/icon",
+                    "type": "object",
+                    "title": "The Icon Schema",
+                    "required": [
+                      "prefix",
+                      "suffix"
+                    ],
+                    "properties": {
+                      "prefix": {
+                        "$id": "#/properties/response/properties/venue/properties/categories/items/properties/icon/properties/prefix",
+                        "type": "string",
+                        "title": "The Prefix Schema",
+                        "default": "",
+                        "examples": [
+                          "https://ss3.4sqi.net/img/categories_v2/parks_outdoors/park_"
+                        ],
+                        "pattern": "^(.*)$"
+                      },
+                      "suffix": {
+                        "$id": "#/properties/response/properties/venue/properties/categories/items/properties/icon/properties/suffix",
+                        "type": "string",
+                        "title": "The Suffix Schema",
+                        "default": "",
+                        "examples": [
+                          ".png"
+                        ],
+                        "pattern": "^(.*)$"
+                      }
+                    }
+                  },
+                  "primary": {
+                    "$id": "#/properties/response/properties/venue/properties/categories/items/properties/primary",
+                    "type": "boolean",
+                    "title": "The Primary Schema",
+                    "default": false,
+                    "examples": [
+                      true
+                    ]
+                  }
+                }
+              }
+            },
+            "verified": {
+              "$id": "#/properties/response/properties/venue/properties/verified",
+              "type": "boolean",
+              "title": "The Verified Schema",
+              "default": false,
+              "examples": [
+                true
+              ]
+            },
+            "stats": {
+              "$id": "#/properties/response/properties/venue/properties/stats",
+              "type": "object",
+              "title": "The Stats Schema",
+              "required": [
+                "checkinsCount",
+                "usersCount",
+                "tipCount",
+                "visitsCount"
+              ],
+              "properties": {
+                "checkinsCount": {
+                  "$id": "#/properties/response/properties/venue/properties/stats/properties/checkinsCount",
+                  "type": "integer",
+                  "title": "The Checkinscount Schema",
+                  "default": 0,
+                  "examples": [
+                    364591
+                  ]
+                },
+                "usersCount": {
+                  "$id": "#/properties/response/properties/venue/properties/stats/properties/usersCount",
+                  "type": "integer",
+                  "title": "The Userscount Schema",
+                  "default": 0,
+                  "examples": [
+                    311634
+                  ]
+                },
+                "tipCount": {
+                  "$id": "#/properties/response/properties/venue/properties/stats/properties/tipCount",
+                  "type": "integer",
+                  "title": "The Tipcount Schema",
+                  "default": 0,
+                  "examples": [
+                    1583
+                  ]
+                },
+                "visitsCount": {
+                  "$id": "#/properties/response/properties/venue/properties/stats/properties/visitsCount",
+                  "type": "integer",
+                  "title": "The Visitscount Schema",
+                  "default": 0,
+                  "examples": [
+                    854553
+                  ]
+                }
+              }
+            },
+            "url": {
+              "$id": "#/properties/response/properties/venue/properties/url",
+              "type": "string",
+              "title": "The Url Schema",
+              "default": "",
+              "examples": [
+                "http://www.centralparknyc.org"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "likes": {
+              "$id": "#/properties/response/properties/venue/properties/likes",
+              "type": "object",
+              "title": "The Likes Schema",
+              "required": [
+                "count",
+                "summary"
+              ],
+              "properties": {
+                "count": {
+                  "$id": "#/properties/response/properties/venue/properties/likes/properties/count",
+                  "type": "integer",
+                  "title": "The Count Schema",
+                  "default": 0,
+                  "examples": [
+                    17370
+                  ]
+                },
+                "summary": {
+                  "$id": "#/properties/response/properties/venue/properties/likes/properties/summary",
+                  "type": "string",
+                  "title": "The Summary Schema",
+                  "default": "",
+                  "examples": [
+                    "17370 Likes"
+                  ],
+                  "pattern": "^(.*)$"
+                }
+              }
+            },
+            "rating": {
+              "$id": "#/properties/response/properties/venue/properties/rating",
+              "type": "number",
+              "title": "The Rating Schema",
+              "default": 0.0,
+              "examples": [
+                9.8
+              ]
+            },
+            "ratingColor": {
+              "$id": "#/properties/response/properties/venue/properties/ratingColor",
+              "type": "string",
+              "title": "The Ratingcolor Schema",
+              "default": "",
+              "examples": [
+                "00B551"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "ratingSignals": {
+              "$id": "#/properties/response/properties/venue/properties/ratingSignals",
+              "type": "integer",
+              "title": "The Ratingsignals Schema",
+              "default": 0,
+              "examples": [
+                18854
+              ]
+            },
+            "beenHere": {
+              "$id": "#/properties/response/properties/venue/properties/beenHere",
+              "type": "object",
+              "title": "The Beenhere Schema",
+              "required": [
+                "count",
+                "unconfirmedCount",
+                "marked",
+                "lastCheckinExpiredAt"
+              ],
+              "properties": {
+                "count": {
+                  "$id": "#/properties/response/properties/venue/properties/beenHere/properties/count",
+                  "type": "integer",
+                  "title": "The Count Schema",
+                  "default": 0,
+                  "examples": [
+                    0
+                  ]
+                },
+                "unconfirmedCount": {
+                  "$id": "#/properties/response/properties/venue/properties/beenHere/properties/unconfirmedCount",
+                  "type": "integer",
+                  "title": "The Unconfirmedcount Schema",
+                  "default": 0,
+                  "examples": [
+                    0
+                  ]
+                },
+                "marked": {
+                  "$id": "#/properties/response/properties/venue/properties/beenHere/properties/marked",
+                  "type": "boolean",
+                  "title": "The Marked Schema",
+                  "default": false,
+                  "examples": [
+                    false
+                  ]
+                },
+                "lastCheckinExpiredAt": {
+                  "$id": "#/properties/response/properties/venue/properties/beenHere/properties/lastCheckinExpiredAt",
+                  "type": "integer",
+                  "title": "The Lastcheckinexpiredat Schema",
+                  "default": 0,
+                  "examples": [
+                    0
+                  ]
+                }
+              }
+            },
+            "photos": {
+              "$id": "#/properties/response/properties/venue/properties/photos",
+              "type": "object",
+              "title": "The Photos Schema",
+              "required": [
+                "count",
+                "groups"
+              ],
+              "properties": {
+                "count": {
+                  "$id": "#/properties/response/properties/venue/properties/photos/properties/count",
+                  "type": "integer",
+                  "title": "The Count Schema",
+                  "default": 0,
+                  "examples": [
+                    26681
+                  ]
+                },
+                "groups": {
+                  "$id": "#/properties/response/properties/venue/properties/photos/properties/groups",
+                  "type": "array",
+                  "title": "The Groups Schema",
+                  "items": {
+                    "$id": "#/properties/response/properties/venue/properties/photos/properties/groups/items",
+                    "type": "object",
+                    "title": "The Items Schema",
+                    "required": [
+                      "type",
+                      "name",
+                      "count",
+                      "items"
+                    ],
+                    "properties": {
+                      "type": {
+                        "$id": "#/properties/response/properties/venue/properties/photos/properties/groups/items/properties/type",
+                        "type": "string",
+                        "title": "The Type Schema",
+                        "default": "",
+                        "examples": [
+                          "venue"
+                        ],
+                        "pattern": "^(.*)$"
+                      },
+                      "name": {
+                        "$id": "#/properties/response/properties/venue/properties/photos/properties/groups/items/properties/name",
+                        "type": "string",
+                        "title": "The Name Schema",
+                        "default": "",
+                        "examples": [
+                          "Venue photos"
+                        ],
+                        "pattern": "^(.*)$"
+                      },
+                      "count": {
+                        "$id": "#/properties/response/properties/venue/properties/photos/properties/groups/items/properties/count",
+                        "type": "integer",
+                        "title": "The Count Schema",
+                        "default": 0,
+                        "examples": [
+                          26681
+                        ]
+                      },
+                      "items": {
+                        "$id": "#/properties/response/properties/venue/properties/photos/properties/groups/items/properties/items",
+                        "type": "array",
+                        "title": "The Items Schema",
+                        "items": {
+                          "$id": "#/properties/response/properties/venue/properties/photos/properties/groups/items/properties/items/items",
+                          "type": "object",
+                          "title": "The Items Schema",
+                          "required": [
+                            "id",
+                            "createdAt",
+                            "source",
+                            "prefix",
+                            "suffix",
+                            "width",
+                            "height",
+                            "user",
+                            "visibility"
+                          ],
+                          "properties": {
+                            "id": {
+                              "$id": "#/properties/response/properties/venue/properties/photos/properties/groups/items/properties/items/items/properties/id",
+                              "type": "string",
+                              "title": "The Id Schema",
+                              "default": "",
+                              "examples": [
+                                "513bd223e4b0e8ef8292ee54"
+                              ],
+                              "pattern": "^(.*)$"
+                            },
+                            "createdAt": {
+                              "$id": "#/properties/response/properties/venue/properties/photos/properties/groups/items/properties/items/items/properties/createdAt",
+                              "type": "integer",
+                              "title": "The Createdat Schema",
+                              "default": 0,
+                              "examples": [
+                                1362874915
+                              ]
+                            },
+                            "source": {
+                              "$id": "#/properties/response/properties/venue/properties/photos/properties/groups/items/properties/items/items/properties/source",
+                              "type": "object",
+                              "title": "The Source Schema",
+                              "required": [
+                                "name",
+                                "url"
+                              ],
+                              "properties": {
+                                "name": {
+                                  "$id": "#/properties/response/properties/venue/properties/photos/properties/groups/items/properties/items/items/properties/source/properties/name",
+                                  "type": "string",
+                                  "title": "The Name Schema",
+                                  "default": "",
+                                  "examples": [
+                                    "Instagram"
+                                  ],
+                                  "pattern": "^(.*)$"
+                                },
+                                "url": {
+                                  "$id": "#/properties/response/properties/venue/properties/photos/properties/groups/items/properties/items/items/properties/source/properties/url",
+                                  "type": "string",
+                                  "title": "The Url Schema",
+                                  "default": "",
+                                  "examples": [
+                                    "http://instagram.com"
+                                  ],
+                                  "pattern": "^(.*)$"
+                                }
+                              }
+                            },
+                            "prefix": {
+                              "$id": "#/properties/response/properties/venue/properties/photos/properties/groups/items/properties/items/items/properties/prefix",
+                              "type": "string",
+                              "title": "The Prefix Schema",
+                              "default": "",
+                              "examples": [
+                                "https://igx.4sqi.net/img/general/"
+                              ],
+                              "pattern": "^(.*)$"
+                            },
+                            "suffix": {
+                              "$id": "#/properties/response/properties/venue/properties/photos/properties/groups/items/properties/items/items/properties/suffix",
+                              "type": "string",
+                              "title": "The Suffix Schema",
+                              "default": "",
+                              "examples": [
+                                "/655018_Zp3vA90Sy4IIDApvfAo5KnDItoV0uEDZeST7bWT-qzk.jpg"
+                              ],
+                              "pattern": "^(.*)$"
+                            },
+                            "width": {
+                              "$id": "#/properties/response/properties/venue/properties/photos/properties/groups/items/properties/items/items/properties/width",
+                              "type": "integer",
+                              "title": "The Width Schema",
+                              "default": 0,
+                              "examples": [
+                                612
+                              ]
+                            },
+                            "height": {
+                              "$id": "#/properties/response/properties/venue/properties/photos/properties/groups/items/properties/items/items/properties/height",
+                              "type": "integer",
+                              "title": "The Height Schema",
+                              "default": 0,
+                              "examples": [
+                                612
+                              ]
+                            },
+                            "user": {
+                              "$id": "#/properties/response/properties/venue/properties/photos/properties/groups/items/properties/items/items/properties/user",
+                              "type": "object",
+                              "title": "The User Schema",
+                              "required": [
+                                "id",
+                                "firstName",
+                                "lastName",
+                                "gender"
+                              ],
+                              "properties": {
+                                "id": {
+                                  "$id": "#/properties/response/properties/venue/properties/photos/properties/groups/items/properties/items/items/properties/user/properties/id",
+                                  "type": "string",
+                                  "title": "The Id Schema",
+                                  "default": "",
+                                  "examples": [
+                                    "123456"
+                                  ],
+                                  "pattern": "^(.*)$"
+                                },
+                                "firstName": {
+                                  "$id": "#/properties/response/properties/venue/properties/photos/properties/groups/items/properties/items/items/properties/user/properties/firstName",
+                                  "type": "string",
+                                  "title": "The Firstname Schema",
+                                  "default": "",
+                                  "examples": [
+                                    "John"
+                                  ],
+                                  "pattern": "^(.*)$"
+                                },
+                                "lastName": {
+                                  "$id": "#/properties/response/properties/venue/properties/photos/properties/groups/items/properties/items/items/properties/user/properties/lastName",
+                                  "type": "string",
+                                  "title": "The Lastname Schema",
+                                  "default": "",
+                                  "examples": [
+                                    "Doe"
+                                  ],
+                                  "pattern": "^(.*)$"
+                                },
+                                "gender": {
+                                  "$id": "#/properties/response/properties/venue/properties/photos/properties/groups/items/properties/items/items/properties/user/properties/gender",
+                                  "type": "string",
+                                  "title": "The Gender Schema",
+                                  "default": "",
+                                  "examples": [
+                                    "male"
+                                  ],
+                                  "pattern": "^(.*)$"
+                                }
+                              }
+                            },
+                            "visibility": {
+                              "$id": "#/properties/response/properties/venue/properties/photos/properties/groups/items/properties/items/items/properties/visibility",
+                              "type": "string",
+                              "title": "The Visibility Schema",
+                              "default": "",
+                              "examples": [
+                                "public"
+                              ],
+                              "pattern": "^(.*)$"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "description": {
+              "$id": "#/properties/response/properties/venue/properties/description",
+              "type": "string",
+              "title": "The Description Schema",
+              "default": "",
+              "examples": [
+                "Central Park is the 843-acre green heart of Manhattan and is maintained by the Central Park Conservancy. It was designed in the 19th century by Frederick Law Olmsted and Calvert Vaux as an urban escape for New Yorkers, and now receives over 40 million visits per year."
+              ],
+              "pattern": "^(.*)$"
+            },
+            "storeId": {
+              "$id": "#/properties/response/properties/venue/properties/storeId",
+              "type": "string",
+              "title": "The Storeid Schema",
+              "default": "",
+              "examples": [
+                ""
+              ],
+              "pattern": "^(.*)$"
+            },
+            "page": {
+              "$id": "#/properties/response/properties/venue/properties/page",
+              "type": "object",
+              "title": "The Page Schema",
+              "required": [
+                "pageInfo",
+                "user"
+              ],
+              "properties": {
+                "pageInfo": {
+                  "$id": "#/properties/response/properties/venue/properties/page/properties/pageInfo",
+                  "type": "object",
+                  "title": "The Pageinfo Schema",
+                  "required": [
+                    "description",
+                    "banner",
+                    "links"
+                  ],
+                  "properties": {
+                    "description": {
+                      "$id": "#/properties/response/properties/venue/properties/page/properties/pageInfo/properties/description",
+                      "type": "string",
+                      "title": "The Description Schema",
+                      "default": "",
+                      "examples": [
+                        "The mission of the Central Park Conservancy, a private non-profit, is to restore, manage, and enhance Central Park, in partnership with the public."
+                      ],
+                      "pattern": "^(.*)$"
+                    },
+                    "banner": {
+                      "$id": "#/properties/response/properties/venue/properties/page/properties/pageInfo/properties/banner",
+                      "type": "string",
+                      "title": "The Banner Schema",
+                      "default": "",
+                      "examples": [
+                        "https://is1.4sqi.net/userpix/HS2JAA2IAAAR2WZO.jpg"
+                      ],
+                      "pattern": "^(.*)$"
+                    },
+                    "links": {
+                      "$id": "#/properties/response/properties/venue/properties/page/properties/pageInfo/properties/links",
+                      "type": "object",
+                      "title": "The Links Schema",
+                      "required": [
+                        "count",
+                        "items"
+                      ],
+                      "properties": {
+                        "count": {
+                          "$id": "#/properties/response/properties/venue/properties/page/properties/pageInfo/properties/links/properties/count",
+                          "type": "integer",
+                          "title": "The Count Schema",
+                          "default": 0,
+                          "examples": [
+                            1
+                          ]
+                        },
+                        "items": {
+                          "$id": "#/properties/response/properties/venue/properties/page/properties/pageInfo/properties/links/properties/items",
+                          "type": "array",
+                          "title": "The Items Schema",
+                          "items": {
+                            "$id": "#/properties/response/properties/venue/properties/page/properties/pageInfo/properties/links/properties/items/items",
+                            "type": "object",
+                            "title": "The Items Schema",
+                            "required": [
+                              "url"
+                            ],
+                            "properties": {
+                              "url": {
+                                "$id": "#/properties/response/properties/venue/properties/page/properties/pageInfo/properties/links/properties/items/items/properties/url",
+                                "type": "string",
+                                "title": "The Url Schema",
+                                "default": "",
+                                "examples": [
+                                  "http://www.centralparknyc.org"
+                                ],
+                                "pattern": "^(.*)$"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "user": {
+                  "$id": "#/properties/response/properties/venue/properties/page/properties/user",
+                  "type": "object",
+                  "title": "The User Schema",
+                  "required": [
+                    "id",
+                    "firstName",
+                    "gender",
+                    "photo",
+                    "type",
+                    "tips",
+                    "lists",
+                    "homeCity",
+                    "bio",
+                    "contact"
+                  ],
+                  "properties": {
+                    "id": {
+                      "$id": "#/properties/response/properties/venue/properties/page/properties/user/properties/id",
+                      "type": "string",
+                      "title": "The Id Schema",
+                      "default": "",
+                      "examples": [
+                        "29060351"
+                      ],
+                      "pattern": "^(.*)$"
+                    },
+                    "firstName": {
+                      "$id": "#/properties/response/properties/venue/properties/page/properties/user/properties/firstName",
+                      "type": "string",
+                      "title": "The Firstname Schema",
+                      "default": "",
+                      "examples": [
+                        "Central Park"
+                      ],
+                      "pattern": "^(.*)$"
+                    },
+                    "gender": {
+                      "$id": "#/properties/response/properties/venue/properties/page/properties/user/properties/gender",
+                      "type": "string",
+                      "title": "The Gender Schema",
+                      "default": "",
+                      "examples": [
+                        "none"
+                      ],
+                      "pattern": "^(.*)$"
+                    },
+                    "photo": {
+                      "$id": "#/properties/response/properties/venue/properties/page/properties/user/properties/photo",
+                      "type": "object",
+                      "title": "The Photo Schema",
+                      "required": [
+                        "prefix",
+                        "suffix"
+                      ],
+                      "properties": {
+                        "prefix": {
+                          "$id": "#/properties/response/properties/venue/properties/page/properties/user/properties/photo/properties/prefix",
+                          "type": "string",
+                          "title": "The Prefix Schema",
+                          "default": "",
+                          "examples": [
+                            "https://igx.4sqi.net/img/user/"
+                          ],
+                          "pattern": "^(.*)$"
+                        },
+                        "suffix": {
+                          "$id": "#/properties/response/properties/venue/properties/page/properties/user/properties/photo/properties/suffix",
+                          "type": "string",
+                          "title": "The Suffix Schema",
+                          "default": "",
+                          "examples": [
+                            "/PCPGGJ2N3ULA5O05.jpg"
+                          ],
+                          "pattern": "^(.*)$"
+                        }
+                      }
+                    },
+                    "type": {
+                      "$id": "#/properties/response/properties/venue/properties/page/properties/user/properties/type",
+                      "type": "string",
+                      "title": "The Type Schema",
+                      "default": "",
+                      "examples": [
+                        "chain"
+                      ],
+                      "pattern": "^(.*)$"
+                    },
+                    "tips": {
+                      "$id": "#/properties/response/properties/venue/properties/page/properties/user/properties/tips",
+                      "type": "object",
+                      "title": "The Tips Schema",
+                      "required": [
+                        "count"
+                      ],
+                      "properties": {
+                        "count": {
+                          "$id": "#/properties/response/properties/venue/properties/page/properties/user/properties/tips/properties/count",
+                          "type": "integer",
+                          "title": "The Count Schema",
+                          "default": 0,
+                          "examples": [
+                            37
+                          ]
+                        }
+                      }
+                    },
+                    "lists": {
+                      "$id": "#/properties/response/properties/venue/properties/page/properties/user/properties/lists",
+                      "type": "object",
+                      "title": "The Lists Schema",
+                      "required": [
+                        "groups"
+                      ],
+                      "properties": {
+                        "groups": {
+                          "$id": "#/properties/response/properties/venue/properties/page/properties/user/properties/lists/properties/groups",
+                          "type": "array",
+                          "title": "The Groups Schema",
+                          "items": {
+                            "$id": "#/properties/response/properties/venue/properties/page/properties/user/properties/lists/properties/groups/items",
+                            "type": "object",
+                            "title": "The Items Schema",
+                            "required": [
+                              "type",
+                              "count",
+                              "items"
+                            ],
+                            "properties": {
+                              "type": {
+                                "$id": "#/properties/response/properties/venue/properties/page/properties/user/properties/lists/properties/groups/items/properties/type",
+                                "type": "string",
+                                "title": "The Type Schema",
+                                "default": "",
+                                "examples": [
+                                  "created"
+                                ],
+                                "pattern": "^(.*)$"
+                              },
+                              "count": {
+                                "$id": "#/properties/response/properties/venue/properties/page/properties/user/properties/lists/properties/groups/items/properties/count",
+                                "type": "integer",
+                                "title": "The Count Schema",
+                                "default": 0,
+                                "examples": [
+                                  2
+                                ]
+                              },
+                              "items": {
+                                "$id": "#/properties/response/properties/venue/properties/page/properties/user/properties/lists/properties/groups/items/properties/items",
+                                "type": "array",
+                                "title": "The Items Schema"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "homeCity": {
+                      "$id": "#/properties/response/properties/venue/properties/page/properties/user/properties/homeCity",
+                      "type": "string",
+                      "title": "The Homecity Schema",
+                      "default": "",
+                      "examples": [
+                        "New York, NY"
+                      ],
+                      "pattern": "^(.*)$"
+                    },
+                    "bio": {
+                      "$id": "#/properties/response/properties/venue/properties/page/properties/user/properties/bio",
+                      "type": "string",
+                      "title": "The Bio Schema",
+                      "default": "",
+                      "examples": [
+                        ""
+                      ],
+                      "pattern": "^(.*)$"
+                    },
+                    "contact": {
+                      "$id": "#/properties/response/properties/venue/properties/page/properties/user/properties/contact",
+                      "type": "object",
+                      "title": "The Contact Schema",
+                      "required": [
+                        "twitter",
+                        "facebook"
+                      ],
+                      "properties": {
+                        "twitter": {
+                          "$id": "#/properties/response/properties/venue/properties/page/properties/user/properties/contact/properties/twitter",
+                          "type": "string",
+                          "title": "The Twitter Schema",
+                          "default": "",
+                          "examples": [
+                            "centralparknyc"
+                          ],
+                          "pattern": "^(.*)$"
+                        },
+                        "facebook": {
+                          "$id": "#/properties/response/properties/venue/properties/page/properties/user/properties/contact/properties/facebook",
+                          "type": "string",
+                          "title": "The Facebook Schema",
+                          "default": "",
+                          "examples": [
+                            "37965424481"
+                          ],
+                          "pattern": "^(.*)$"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "hereNow": {
+              "$id": "#/properties/response/properties/venue/properties/hereNow",
+              "type": "object",
+              "title": "The Herenow Schema",
+              "required": [
+                "count",
+                "summary",
+                "groups"
+              ],
+              "properties": {
+                "count": {
+                  "$id": "#/properties/response/properties/venue/properties/hereNow/properties/count",
+                  "type": "integer",
+                  "title": "The Count Schema",
+                  "default": 0,
+                  "examples": [
+                    16
+                  ]
+                },
+                "summary": {
+                  "$id": "#/properties/response/properties/venue/properties/hereNow/properties/summary",
+                  "type": "string",
+                  "title": "The Summary Schema",
+                  "default": "",
+                  "examples": [
+                    "16 people are here"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "groups": {
+                  "$id": "#/properties/response/properties/venue/properties/hereNow/properties/groups",
+                  "type": "array",
+                  "title": "The Groups Schema",
+                  "items": {
+                    "$id": "#/properties/response/properties/venue/properties/hereNow/properties/groups/items",
+                    "type": "object",
+                    "title": "The Items Schema",
+                    "required": [
+                      "type",
+                      "name",
+                      "count",
+                      "items"
+                    ],
+                    "properties": {
+                      "type": {
+                        "$id": "#/properties/response/properties/venue/properties/hereNow/properties/groups/items/properties/type",
+                        "type": "string",
+                        "title": "The Type Schema",
+                        "default": "",
+                        "examples": [
+                          "others"
+                        ],
+                        "pattern": "^(.*)$"
+                      },
+                      "name": {
+                        "$id": "#/properties/response/properties/venue/properties/hereNow/properties/groups/items/properties/name",
+                        "type": "string",
+                        "title": "The Name Schema",
+                        "default": "",
+                        "examples": [
+                          "Other people here"
+                        ],
+                        "pattern": "^(.*)$"
+                      },
+                      "count": {
+                        "$id": "#/properties/response/properties/venue/properties/hereNow/properties/groups/items/properties/count",
+                        "type": "integer",
+                        "title": "The Count Schema",
+                        "default": 0,
+                        "examples": [
+                          16
+                        ]
+                      },
+                      "items": {
+                        "$id": "#/properties/response/properties/venue/properties/hereNow/properties/groups/items/properties/items",
+                        "type": "array",
+                        "title": "The Items Schema"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "createdAt": {
+              "$id": "#/properties/response/properties/venue/properties/createdAt",
+              "type": "integer",
+              "title": "The Createdat Schema",
+              "default": 0,
+              "examples": [
+                1093478400
+              ]
+            },
+            "tips": {
+              "$id": "#/properties/response/properties/venue/properties/tips",
+              "type": "object",
+              "title": "The Tips Schema",
+              "required": [
+                "count",
+                "groups"
+              ],
+              "properties": {
+                "count": {
+                  "$id": "#/properties/response/properties/venue/properties/tips/properties/count",
+                  "type": "integer",
+                  "title": "The Count Schema",
+                  "default": 0,
+                  "examples": [
+                    1583
+                  ]
+                },
+                "groups": {
+                  "$id": "#/properties/response/properties/venue/properties/tips/properties/groups",
+                  "type": "array",
+                  "title": "The Groups Schema",
+                  "items": {
+                    "$id": "#/properties/response/properties/venue/properties/tips/properties/groups/items",
+                    "type": "object",
+                    "title": "The Items Schema",
+                    "required": [
+                      "type",
+                      "name",
+                      "count",
+                      "items"
+                    ],
+                    "properties": {
+                      "type": {
+                        "$id": "#/properties/response/properties/venue/properties/tips/properties/groups/items/properties/type",
+                        "type": "string",
+                        "title": "The Type Schema",
+                        "default": "",
+                        "examples": [
+                          "others"
+                        ],
+                        "pattern": "^(.*)$"
+                      },
+                      "name": {
+                        "$id": "#/properties/response/properties/venue/properties/tips/properties/groups/items/properties/name",
+                        "type": "string",
+                        "title": "The Name Schema",
+                        "default": "",
+                        "examples": [
+                          "All tips"
+                        ],
+                        "pattern": "^(.*)$"
+                      },
+                      "count": {
+                        "$id": "#/properties/response/properties/venue/properties/tips/properties/groups/items/properties/count",
+                        "type": "integer",
+                        "title": "The Count Schema",
+                        "default": 0,
+                        "examples": [
+                          1583
+                        ]
+                      },
+                      "items": {
+                        "$id": "#/properties/response/properties/venue/properties/tips/properties/groups/items/properties/items",
+                        "type": "array",
+                        "title": "The Items Schema",
+                        "items": {
+                          "$id": "#/properties/response/properties/venue/properties/tips/properties/groups/items/properties/items/items",
+                          "type": "object",
+                          "title": "The Items Schema",
+                          "required": [
+                            "id",
+                            "createdAt",
+                            "text",
+                            "type",
+                            "canonicalUrl",
+                            "photo",
+                            "photourl",
+                            "lang",
+                            "likes",
+                            "logView",
+                            "agreeCount",
+                            "disagreeCount",
+                            "todo",
+                            "user"
+                          ],
+                          "properties": {
+                            "id": {
+                              "$id": "#/properties/response/properties/venue/properties/tips/properties/groups/items/properties/items/items/properties/id",
+                              "type": "string",
+                              "title": "The Id Schema",
+                              "default": "",
+                              "examples": [
+                                "5150464ee4b02f70eb28eee4"
+                              ],
+                              "pattern": "^(.*)$"
+                            },
+                            "createdAt": {
+                              "$id": "#/properties/response/properties/venue/properties/tips/properties/groups/items/properties/items/items/properties/createdAt",
+                              "type": "integer",
+                              "title": "The Createdat Schema",
+                              "default": 0,
+                              "examples": [
+                                1364215374
+                              ]
+                            },
+                            "text": {
+                              "$id": "#/properties/response/properties/venue/properties/tips/properties/groups/items/properties/items/items/properties/text",
+                              "type": "string",
+                              "title": "The Text Schema",
+                              "default": "",
+                              "examples": [
+                                "Did you know? To create that feeling of being in the countryside, and not in the middle of a city, the four Transverse Roads were sunken down eight feet below the park’s surface."
+                              ],
+                              "pattern": "^(.*)$"
+                            },
+                            "type": {
+                              "$id": "#/properties/response/properties/venue/properties/tips/properties/groups/items/properties/items/items/properties/type",
+                              "type": "string",
+                              "title": "The Type Schema",
+                              "default": "",
+                              "examples": [
+                                "user"
+                              ],
+                              "pattern": "^(.*)$"
+                            },
+                            "canonicalUrl": {
+                              "$id": "#/properties/response/properties/venue/properties/tips/properties/groups/items/properties/items/items/properties/canonicalUrl",
+                              "type": "string",
+                              "title": "The Canonicalurl Schema",
+                              "default": "",
+                              "examples": [
+                                "https://foursquare.com/item/5150464ee4b02f70eb28eee4"
+                              ],
+                              "pattern": "^(.*)$"
+                            },
+                            "photo": {
+                              "$id": "#/properties/response/properties/venue/properties/tips/properties/groups/items/properties/items/items/properties/photo",
+                              "type": "object",
+                              "title": "The Photo Schema",
+                              "required": [
+                                "id",
+                                "createdAt",
+                                "source",
+                                "prefix",
+                                "suffix",
+                                "width",
+                                "height",
+                                "visibility"
+                              ],
+                              "properties": {
+                                "id": {
+                                  "$id": "#/properties/response/properties/venue/properties/tips/properties/groups/items/properties/items/items/properties/photo/properties/id",
+                                  "type": "string",
+                                  "title": "The Id Schema",
+                                  "default": "",
+                                  "examples": [
+                                    "5150464f52625adbe29d04c2"
+                                  ],
+                                  "pattern": "^(.*)$"
+                                },
+                                "createdAt": {
+                                  "$id": "#/properties/response/properties/venue/properties/tips/properties/groups/items/properties/items/items/properties/photo/properties/createdAt",
+                                  "type": "integer",
+                                  "title": "The Createdat Schema",
+                                  "default": 0,
+                                  "examples": [
+                                    1364215375
+                                  ]
+                                },
+                                "source": {
+                                  "$id": "#/properties/response/properties/venue/properties/tips/properties/groups/items/properties/items/items/properties/photo/properties/source",
+                                  "type": "object",
+                                  "title": "The Source Schema",
+                                  "required": [
+                                    "name",
+                                    "url"
+                                  ],
+                                  "properties": {
+                                    "name": {
+                                      "$id": "#/properties/response/properties/venue/properties/tips/properties/groups/items/properties/items/items/properties/photo/properties/source/properties/name",
+                                      "type": "string",
+                                      "title": "The Name Schema",
+                                      "default": "",
+                                      "examples": [
+                                        "Foursquare Web"
+                                      ],
+                                      "pattern": "^(.*)$"
+                                    },
+                                    "url": {
+                                      "$id": "#/properties/response/properties/venue/properties/tips/properties/groups/items/properties/items/items/properties/photo/properties/source/properties/url",
+                                      "type": "string",
+                                      "title": "The Url Schema",
+                                      "default": "",
+                                      "examples": [
+                                        "https://foursquare.com"
+                                      ],
+                                      "pattern": "^(.*)$"
+                                    }
+                                  }
+                                },
+                                "prefix": {
+                                  "$id": "#/properties/response/properties/venue/properties/tips/properties/groups/items/properties/items/items/properties/photo/properties/prefix",
+                                  "type": "string",
+                                  "title": "The Prefix Schema",
+                                  "default": "",
+                                  "examples": [
+                                    "https://igx.4sqi.net/img/general/"
+                                  ],
+                                  "pattern": "^(.*)$"
+                                },
+                                "suffix": {
+                                  "$id": "#/properties/response/properties/venue/properties/tips/properties/groups/items/properties/items/items/properties/photo/properties/suffix",
+                                  "type": "string",
+                                  "title": "The Suffix Schema",
+                                  "default": "",
+                                  "examples": [
+                                    "/13764780_Ao02DfJpgG1ar2PfgP51hOKWsn38iai8bsSpzKd0GcM.jpg"
+                                  ],
+                                  "pattern": "^(.*)$"
+                                },
+                                "width": {
+                                  "$id": "#/properties/response/properties/venue/properties/tips/properties/groups/items/properties/items/items/properties/photo/properties/width",
+                                  "type": "integer",
+                                  "title": "The Width Schema",
+                                  "default": 0,
+                                  "examples": [
+                                    800
+                                  ]
+                                },
+                                "height": {
+                                  "$id": "#/properties/response/properties/venue/properties/tips/properties/groups/items/properties/items/items/properties/photo/properties/height",
+                                  "type": "integer",
+                                  "title": "The Height Schema",
+                                  "default": 0,
+                                  "examples": [
+                                    542
+                                  ]
+                                },
+                                "visibility": {
+                                  "$id": "#/properties/response/properties/venue/properties/tips/properties/groups/items/properties/items/items/properties/photo/properties/visibility",
+                                  "type": "string",
+                                  "title": "The Visibility Schema",
+                                  "default": "",
+                                  "examples": [
+                                    "public"
+                                  ],
+                                  "pattern": "^(.*)$"
+                                }
+                              }
+                            },
+                            "photourl": {
+                              "$id": "#/properties/response/properties/venue/properties/tips/properties/groups/items/properties/items/items/properties/photourl",
+                              "type": "string",
+                              "title": "The Photourl Schema",
+                              "default": "",
+                              "examples": [
+                                "https://igx.4sqi.net/img/general/original/13764780_Ao02DfJpgG1ar2PfgP51hOKWsn38iai8bsSpzKd0GcM.jpg"
+                              ],
+                              "pattern": "^(.*)$"
+                            },
+                            "lang": {
+                              "$id": "#/properties/response/properties/venue/properties/tips/properties/groups/items/properties/items/items/properties/lang",
+                              "type": "string",
+                              "title": "The Lang Schema",
+                              "default": "",
+                              "examples": [
+                                "en"
+                              ],
+                              "pattern": "^(.*)$"
+                            },
+                            "likes": {
+                              "$id": "#/properties/response/properties/venue/properties/tips/properties/groups/items/properties/items/items/properties/likes",
+                              "type": "object",
+                              "title": "The Likes Schema",
+                              "required": [
+                                "count",
+                                "groups",
+                                "summary"
+                              ],
+                              "properties": {
+                                "count": {
+                                  "$id": "#/properties/response/properties/venue/properties/tips/properties/groups/items/properties/items/items/properties/likes/properties/count",
+                                  "type": "integer",
+                                  "title": "The Count Schema",
+                                  "default": 0,
+                                  "examples": [
+                                    247
+                                  ]
+                                },
+                                "groups": {
+                                  "$id": "#/properties/response/properties/venue/properties/tips/properties/groups/items/properties/items/items/properties/likes/properties/groups",
+                                  "type": "array",
+                                  "title": "The Groups Schema",
+                                  "items": {
+                                    "$id": "#/properties/response/properties/venue/properties/tips/properties/groups/items/properties/items/items/properties/likes/properties/groups/items",
+                                    "type": "object",
+                                    "title": "The Items Schema",
+                                    "required": [
+                                      "type",
+                                      "count",
+                                      "items"
+                                    ],
+                                    "properties": {
+                                      "type": {
+                                        "$id": "#/properties/response/properties/venue/properties/tips/properties/groups/items/properties/items/items/properties/likes/properties/groups/items/properties/type",
+                                        "type": "string",
+                                        "title": "The Type Schema",
+                                        "default": "",
+                                        "examples": [
+                                          "others"
+                                        ],
+                                        "pattern": "^(.*)$"
+                                      },
+                                      "count": {
+                                        "$id": "#/properties/response/properties/venue/properties/tips/properties/groups/items/properties/items/items/properties/likes/properties/groups/items/properties/count",
+                                        "type": "integer",
+                                        "title": "The Count Schema",
+                                        "default": 0,
+                                        "examples": [
+                                          247
+                                        ]
+                                      },
+                                      "items": {
+                                        "$id": "#/properties/response/properties/venue/properties/tips/properties/groups/items/properties/items/items/properties/likes/properties/groups/items/properties/items",
+                                        "type": "array",
+                                        "title": "The Items Schema"
+                                      }
+                                    }
+                                  }
+                                },
+                                "summary": {
+                                  "$id": "#/properties/response/properties/venue/properties/tips/properties/groups/items/properties/items/items/properties/likes/properties/summary",
+                                  "type": "string",
+                                  "title": "The Summary Schema",
+                                  "default": "",
+                                  "examples": [
+                                    "247 likes"
+                                  ],
+                                  "pattern": "^(.*)$"
+                                }
+                              }
+                            },
+                            "logView": {
+                              "$id": "#/properties/response/properties/venue/properties/tips/properties/groups/items/properties/items/items/properties/logView",
+                              "type": "boolean",
+                              "title": "The Logview Schema",
+                              "default": false,
+                              "examples": [
+                                true
+                              ]
+                            },
+                            "agreeCount": {
+                              "$id": "#/properties/response/properties/venue/properties/tips/properties/groups/items/properties/items/items/properties/agreeCount",
+                              "type": "integer",
+                              "title": "The Agreecount Schema",
+                              "default": 0,
+                              "examples": [
+                                246
+                              ]
+                            },
+                            "disagreeCount": {
+                              "$id": "#/properties/response/properties/venue/properties/tips/properties/groups/items/properties/items/items/properties/disagreeCount",
+                              "type": "integer",
+                              "title": "The Disagreecount Schema",
+                              "default": 0,
+                              "examples": [
+                                0
+                              ]
+                            },
+                            "todo": {
+                              "$id": "#/properties/response/properties/venue/properties/tips/properties/groups/items/properties/items/items/properties/todo",
+                              "type": "object",
+                              "title": "The Todo Schema",
+                              "required": [
+                                "count"
+                              ],
+                              "properties": {
+                                "count": {
+                                  "$id": "#/properties/response/properties/venue/properties/tips/properties/groups/items/properties/items/items/properties/todo/properties/count",
+                                  "type": "integer",
+                                  "title": "The Count Schema",
+                                  "default": 0,
+                                  "examples": [
+                                    30
+                                  ]
+                                }
+                              }
+                            },
+                            "user": {
+                              "$id": "#/properties/response/properties/venue/properties/tips/properties/groups/items/properties/items/items/properties/user",
+                              "type": "object",
+                              "title": "The User Schema",
+                              "required": [
+                                "id",
+                                "firstName",
+                                "gender",
+                                "photo",
+                                "type"
+                              ],
+                              "properties": {
+                                "id": {
+                                  "$id": "#/properties/response/properties/venue/properties/tips/properties/groups/items/properties/items/items/properties/user/properties/id",
+                                  "type": "string",
+                                  "title": "The Id Schema",
+                                  "default": "",
+                                  "examples": [
+                                    "13764780"
+                                  ],
+                                  "pattern": "^(.*)$"
+                                },
+                                "firstName": {
+                                  "$id": "#/properties/response/properties/venue/properties/tips/properties/groups/items/properties/items/items/properties/user/properties/firstName",
+                                  "type": "string",
+                                  "title": "The Firstname Schema",
+                                  "default": "",
+                                  "examples": [
+                                    "City of New York"
+                                  ],
+                                  "pattern": "^(.*)$"
+                                },
+                                "gender": {
+                                  "$id": "#/properties/response/properties/venue/properties/tips/properties/groups/items/properties/items/items/properties/user/properties/gender",
+                                  "type": "string",
+                                  "title": "The Gender Schema",
+                                  "default": "",
+                                  "examples": [
+                                    "none"
+                                  ],
+                                  "pattern": "^(.*)$"
+                                },
+                                "photo": {
+                                  "$id": "#/properties/response/properties/venue/properties/tips/properties/groups/items/properties/items/items/properties/user/properties/photo",
+                                  "type": "object",
+                                  "title": "The Photo Schema",
+                                  "required": [
+                                    "prefix",
+                                    "suffix"
+                                  ],
+                                  "properties": {
+                                    "prefix": {
+                                      "$id": "#/properties/response/properties/venue/properties/tips/properties/groups/items/properties/items/items/properties/user/properties/photo/properties/prefix",
+                                      "type": "string",
+                                      "title": "The Prefix Schema",
+                                      "default": "",
+                                      "examples": [
+                                        "https://igx.4sqi.net/img/user/"
+                                      ],
+                                      "pattern": "^(.*)$"
+                                    },
+                                    "suffix": {
+                                      "$id": "#/properties/response/properties/venue/properties/tips/properties/groups/items/properties/items/items/properties/user/properties/photo/properties/suffix",
+                                      "type": "string",
+                                      "title": "The Suffix Schema",
+                                      "default": "",
+                                      "examples": [
+                                        "/2X1FKJPUY3DGRRK3.png"
+                                      ],
+                                      "pattern": "^(.*)$"
+                                    }
+                                  }
+                                },
+                                "type": {
+                                  "$id": "#/properties/response/properties/venue/properties/tips/properties/groups/items/properties/items/items/properties/user/properties/type",
+                                  "type": "string",
+                                  "title": "The Type Schema",
+                                  "default": "",
+                                  "examples": [
+                                    "page"
+                                  ],
+                                  "pattern": "^(.*)$"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "shortUrl": {
+              "$id": "#/properties/response/properties/venue/properties/shortUrl",
+              "type": "string",
+              "title": "The Shorturl Schema",
+              "default": "",
+              "examples": [
+                "http://4sq.com/2UsPUp"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "timeZone": {
+              "$id": "#/properties/response/properties/venue/properties/timeZone",
+              "type": "string",
+              "title": "The Timezone Schema",
+              "default": "",
+              "examples": [
+                "America/New_York"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "listed": {
+              "$id": "#/properties/response/properties/venue/properties/listed",
+              "type": "object",
+              "title": "The Listed Schema",
+              "required": [
+                "count",
+                "groups"
+              ],
+              "properties": {
+                "count": {
+                  "$id": "#/properties/response/properties/venue/properties/listed/properties/count",
+                  "type": "integer",
+                  "title": "The Count Schema",
+                  "default": 0,
+                  "examples": [
+                    5731
+                  ]
+                },
+                "groups": {
+                  "$id": "#/properties/response/properties/venue/properties/listed/properties/groups",
+                  "type": "array",
+                  "title": "The Groups Schema",
+                  "items": {
+                    "$id": "#/properties/response/properties/venue/properties/listed/properties/groups/items",
+                    "type": "object",
+                    "title": "The Items Schema",
+                    "required": [
+                      "type",
+                      "name",
+                      "count",
+                      "items"
+                    ],
+                    "properties": {
+                      "type": {
+                        "$id": "#/properties/response/properties/venue/properties/listed/properties/groups/items/properties/type",
+                        "type": "string",
+                        "title": "The Type Schema",
+                        "default": "",
+                        "examples": [
+                          "others"
+                        ],
+                        "pattern": "^(.*)$"
+                      },
+                      "name": {
+                        "$id": "#/properties/response/properties/venue/properties/listed/properties/groups/items/properties/name",
+                        "type": "string",
+                        "title": "The Name Schema",
+                        "default": "",
+                        "examples": [
+                          "Lists from other people"
+                        ],
+                        "pattern": "^(.*)$"
+                      },
+                      "count": {
+                        "$id": "#/properties/response/properties/venue/properties/listed/properties/groups/items/properties/count",
+                        "type": "integer",
+                        "title": "The Count Schema",
+                        "default": 0,
+                        "examples": [
+                          5731
+                        ]
+                      },
+                      "items": {
+                        "$id": "#/properties/response/properties/venue/properties/listed/properties/groups/items/properties/items",
+                        "type": "array",
+                        "title": "The Items Schema",
+                        "items": {
+                          "$id": "#/properties/response/properties/venue/properties/listed/properties/groups/items/properties/items/items",
+                          "type": "object",
+                          "title": "The Items Schema",
+                          "required": [
+                            "id",
+                            "name",
+                            "description",
+                            "type",
+                            "user",
+                            "editable",
+                            "public",
+                            "collaborative",
+                            "url",
+                            "canonicalUrl",
+                            "createdAt",
+                            "updatedAt",
+                            "photo",
+                            "followers",
+                            "listItems"
+                          ],
+                          "properties": {
+                            "id": {
+                              "$id": "#/properties/response/properties/venue/properties/listed/properties/groups/items/properties/items/items/properties/id",
+                              "type": "string",
+                              "title": "The Id Schema",
+                              "default": "",
+                              "examples": [
+                                "4fad24a2e4b0bcc0c18be03c"
+                              ],
+                              "pattern": "^(.*)$"
+                            },
+                            "name": {
+                              "$id": "#/properties/response/properties/venue/properties/listed/properties/groups/items/properties/items/items/properties/name",
+                              "type": "string",
+                              "title": "The Name Schema",
+                              "default": "",
+                              "examples": [
+                                "101 places to see in Manhattan before you die"
+                              ],
+                              "pattern": "^(.*)$"
+                            },
+                            "description": {
+                              "$id": "#/properties/response/properties/venue/properties/listed/properties/groups/items/properties/items/items/properties/description",
+                              "type": "string",
+                              "title": "The Description Schema",
+                              "default": "",
+                              "examples": [
+                                "Best spots to see in Manhattan (New York City) as restaurants, monuments and public spaces. Enjoy!"
+                              ],
+                              "pattern": "^(.*)$"
+                            },
+                            "type": {
+                              "$id": "#/properties/response/properties/venue/properties/listed/properties/groups/items/properties/items/items/properties/type",
+                              "type": "string",
+                              "title": "The Type Schema",
+                              "default": "",
+                              "examples": [
+                                "others"
+                              ],
+                              "pattern": "^(.*)$"
+                            },
+                            "user": {
+                              "$id": "#/properties/response/properties/venue/properties/listed/properties/groups/items/properties/items/items/properties/user",
+                              "type": "object",
+                              "title": "The User Schema",
+                              "required": [
+                                "id",
+                                "firstName",
+                                "lastName",
+                                "gender",
+                                "photo"
+                              ],
+                              "properties": {
+                                "id": {
+                                  "$id": "#/properties/response/properties/venue/properties/listed/properties/groups/items/properties/items/items/properties/user/properties/id",
+                                  "type": "string",
+                                  "title": "The Id Schema",
+                                  "default": "",
+                                  "examples": [
+                                    "356747"
+                                  ],
+                                  "pattern": "^(.*)$"
+                                },
+                                "firstName": {
+                                  "$id": "#/properties/response/properties/venue/properties/listed/properties/groups/items/properties/items/items/properties/user/properties/firstName",
+                                  "type": "string",
+                                  "title": "The Firstname Schema",
+                                  "default": "",
+                                  "examples": [
+                                    "John"
+                                  ],
+                                  "pattern": "^(.*)$"
+                                },
+                                "lastName": {
+                                  "$id": "#/properties/response/properties/venue/properties/listed/properties/groups/items/properties/items/items/properties/user/properties/lastName",
+                                  "type": "string",
+                                  "title": "The Lastname Schema",
+                                  "default": "",
+                                  "examples": [
+                                    "Doe"
+                                  ],
+                                  "pattern": "^(.*)$"
+                                },
+                                "gender": {
+                                  "$id": "#/properties/response/properties/venue/properties/listed/properties/groups/items/properties/items/items/properties/user/properties/gender",
+                                  "type": "string",
+                                  "title": "The Gender Schema",
+                                  "default": "",
+                                  "examples": [
+                                    "male"
+                                  ],
+                                  "pattern": "^(.*)$"
+                                },
+                                "photo": {
+                                  "$id": "#/properties/response/properties/venue/properties/listed/properties/groups/items/properties/items/items/properties/user/properties/photo",
+                                  "type": "object",
+                                  "title": "The Photo Schema",
+                                  "required": [
+                                    "prefix",
+                                    "suffix"
+                                  ],
+                                  "properties": {
+                                    "prefix": {
+                                      "$id": "#/properties/response/properties/venue/properties/listed/properties/groups/items/properties/items/items/properties/user/properties/photo/properties/prefix",
+                                      "type": "string",
+                                      "title": "The Prefix Schema",
+                                      "default": "",
+                                      "examples": [
+                                        "https://igx.4sqi.net/img/user/"
+                                      ],
+                                      "pattern": "^(.*)$"
+                                    },
+                                    "suffix": {
+                                      "$id": "#/properties/response/properties/venue/properties/listed/properties/groups/items/properties/items/items/properties/user/properties/photo/properties/suffix",
+                                      "type": "string",
+                                      "title": "The Suffix Schema",
+                                      "default": "",
+                                      "examples": [
+                                        "/356747-WQOTM2ASOIERONL3.jpg"
+                                      ],
+                                      "pattern": "^(.*)$"
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "editable": {
+                              "$id": "#/properties/response/properties/venue/properties/listed/properties/groups/items/properties/items/items/properties/editable",
+                              "type": "boolean",
+                              "title": "The Editable Schema",
+                              "default": false,
+                              "examples": [
+                                false
+                              ]
+                            },
+                            "public": {
+                              "$id": "#/properties/response/properties/venue/properties/listed/properties/groups/items/properties/items/items/properties/public",
+                              "type": "boolean",
+                              "title": "The Public Schema",
+                              "default": false,
+                              "examples": [
+                                true
+                              ]
+                            },
+                            "collaborative": {
+                              "$id": "#/properties/response/properties/venue/properties/listed/properties/groups/items/properties/items/items/properties/collaborative",
+                              "type": "boolean",
+                              "title": "The Collaborative Schema",
+                              "default": false,
+                              "examples": [
+                                false
+                              ]
+                            },
+                            "url": {
+                              "$id": "#/properties/response/properties/venue/properties/listed/properties/groups/items/properties/items/items/properties/url",
+                              "type": "string",
+                              "title": "The Url Schema",
+                              "default": "",
+                              "examples": [
+                                "/boke/list/101-places-to-see-in-manhattan-before-you-die"
+                              ],
+                              "pattern": "^(.*)$"
+                            },
+                            "canonicalUrl": {
+                              "$id": "#/properties/response/properties/venue/properties/listed/properties/groups/items/properties/items/items/properties/canonicalUrl",
+                              "type": "string",
+                              "title": "The Canonicalurl Schema",
+                              "default": "",
+                              "examples": [
+                                "https://foursquare.com/boke/list/101-places-to-see-in-manhattan-before-you-die"
+                              ],
+                              "pattern": "^(.*)$"
+                            },
+                            "createdAt": {
+                              "$id": "#/properties/response/properties/venue/properties/listed/properties/groups/items/properties/items/items/properties/createdAt",
+                              "type": "integer",
+                              "title": "The Createdat Schema",
+                              "default": 0,
+                              "examples": [
+                                1336747170
+                              ]
+                            },
+                            "updatedAt": {
+                              "$id": "#/properties/response/properties/venue/properties/listed/properties/groups/items/properties/items/items/properties/updatedAt",
+                              "type": "integer",
+                              "title": "The Updatedat Schema",
+                              "default": 0,
+                              "examples": [
+                                1406242886
+                              ]
+                            },
+                            "photo": {
+                              "$id": "#/properties/response/properties/venue/properties/listed/properties/groups/items/properties/items/items/properties/photo",
+                              "type": "object",
+                              "title": "The Photo Schema",
+                              "required": [
+                                "id",
+                                "createdAt",
+                                "prefix",
+                                "suffix",
+                                "width",
+                                "height",
+                                "user",
+                                "visibility"
+                              ],
+                              "properties": {
+                                "id": {
+                                  "$id": "#/properties/response/properties/venue/properties/listed/properties/groups/items/properties/items/items/properties/photo/properties/id",
+                                  "type": "string",
+                                  "title": "The Id Schema",
+                                  "default": "",
+                                  "examples": [
+                                    "4fa97b0c121d8a3faef6f2df"
+                                  ],
+                                  "pattern": "^(.*)$"
+                                },
+                                "createdAt": {
+                                  "$id": "#/properties/response/properties/venue/properties/listed/properties/groups/items/properties/items/items/properties/photo/properties/createdAt",
+                                  "type": "integer",
+                                  "title": "The Createdat Schema",
+                                  "default": 0,
+                                  "examples": [
+                                    1336507148
+                                  ]
+                                },
+                                "prefix": {
+                                  "$id": "#/properties/response/properties/venue/properties/listed/properties/groups/items/properties/items/items/properties/photo/properties/prefix",
+                                  "type": "string",
+                                  "title": "The Prefix Schema",
+                                  "default": "",
+                                  "examples": [
+                                    "https://igx.4sqi.net/img/general/"
+                                  ],
+                                  "pattern": "^(.*)$"
+                                },
+                                "suffix": {
+                                  "$id": "#/properties/response/properties/venue/properties/listed/properties/groups/items/properties/items/items/properties/photo/properties/suffix",
+                                  "type": "string",
+                                  "title": "The Suffix Schema",
+                                  "default": "",
+                                  "examples": [
+                                    "/IcmBihQCVr4Zt0Vxt9l237NHv--nxg1Z5_8QIMjeD8E.jpg"
+                                  ],
+                                  "pattern": "^(.*)$"
+                                },
+                                "width": {
+                                  "$id": "#/properties/response/properties/venue/properties/listed/properties/groups/items/properties/items/items/properties/photo/properties/width",
+                                  "type": "integer",
+                                  "title": "The Width Schema",
+                                  "default": 0,
+                                  "examples": [
+                                    325
+                                  ]
+                                },
+                                "height": {
+                                  "$id": "#/properties/response/properties/venue/properties/listed/properties/groups/items/properties/items/items/properties/photo/properties/height",
+                                  "type": "integer",
+                                  "title": "The Height Schema",
+                                  "default": 0,
+                                  "examples": [
+                                    487
+                                  ]
+                                },
+                                "user": {
+                                  "$id": "#/properties/response/properties/venue/properties/listed/properties/groups/items/properties/items/items/properties/photo/properties/user",
+                                  "type": "object",
+                                  "title": "The User Schema",
+                                  "required": [
+                                    "id",
+                                    "firstName",
+                                    "gender",
+                                    "photo",
+                                    "type"
+                                  ],
+                                  "properties": {
+                                    "id": {
+                                      "$id": "#/properties/response/properties/venue/properties/listed/properties/groups/items/properties/items/items/properties/photo/properties/user/properties/id",
+                                      "type": "string",
+                                      "title": "The Id Schema",
+                                      "default": "",
+                                      "examples": [
+                                        "13125997"
+                                      ],
+                                      "pattern": "^(.*)$"
+                                    },
+                                    "firstName": {
+                                      "$id": "#/properties/response/properties/venue/properties/listed/properties/groups/items/properties/items/items/properties/photo/properties/user/properties/firstName",
+                                      "type": "string",
+                                      "title": "The Firstname Schema",
+                                      "default": "",
+                                      "examples": [
+                                        "IWalked Audio Tours"
+                                      ],
+                                      "pattern": "^(.*)$"
+                                    },
+                                    "gender": {
+                                      "$id": "#/properties/response/properties/venue/properties/listed/properties/groups/items/properties/items/items/properties/photo/properties/user/properties/gender",
+                                      "type": "string",
+                                      "title": "The Gender Schema",
+                                      "default": "",
+                                      "examples": [
+                                        "none"
+                                      ],
+                                      "pattern": "^(.*)$"
+                                    },
+                                    "photo": {
+                                      "$id": "#/properties/response/properties/venue/properties/listed/properties/groups/items/properties/items/items/properties/photo/properties/user/properties/photo",
+                                      "type": "object",
+                                      "title": "The Photo Schema",
+                                      "required": [
+                                        "prefix",
+                                        "suffix"
+                                      ],
+                                      "properties": {
+                                        "prefix": {
+                                          "$id": "#/properties/response/properties/venue/properties/listed/properties/groups/items/properties/items/items/properties/photo/properties/user/properties/photo/properties/prefix",
+                                          "type": "string",
+                                          "title": "The Prefix Schema",
+                                          "default": "",
+                                          "examples": [
+                                            "https://igx.4sqi.net/img/user/"
+                                          ],
+                                          "pattern": "^(.*)$"
+                                        },
+                                        "suffix": {
+                                          "$id": "#/properties/response/properties/venue/properties/listed/properties/groups/items/properties/items/items/properties/photo/properties/user/properties/photo/properties/suffix",
+                                          "type": "string",
+                                          "title": "The Suffix Schema",
+                                          "default": "",
+                                          "examples": [
+                                            "/KZCTVBJ0FXUHSQA5.jpg"
+                                          ],
+                                          "pattern": "^(.*)$"
+                                        }
+                                      }
+                                    },
+                                    "type": {
+                                      "$id": "#/properties/response/properties/venue/properties/listed/properties/groups/items/properties/items/items/properties/photo/properties/user/properties/type",
+                                      "type": "string",
+                                      "title": "The Type Schema",
+                                      "default": "",
+                                      "examples": [
+                                        "page"
+                                      ],
+                                      "pattern": "^(.*)$"
+                                    }
+                                  }
+                                },
+                                "visibility": {
+                                  "$id": "#/properties/response/properties/venue/properties/listed/properties/groups/items/properties/items/items/properties/photo/properties/visibility",
+                                  "type": "string",
+                                  "title": "The Visibility Schema",
+                                  "default": "",
+                                  "examples": [
+                                    "public"
+                                  ],
+                                  "pattern": "^(.*)$"
+                                }
+                              }
+                            },
+                            "followers": {
+                              "$id": "#/properties/response/properties/venue/properties/listed/properties/groups/items/properties/items/items/properties/followers",
+                              "type": "object",
+                              "title": "The Followers Schema",
+                              "required": [
+                                "count"
+                              ],
+                              "properties": {
+                                "count": {
+                                  "$id": "#/properties/response/properties/venue/properties/listed/properties/groups/items/properties/items/items/properties/followers/properties/count",
+                                  "type": "integer",
+                                  "title": "The Count Schema",
+                                  "default": 0,
+                                  "examples": [
+                                    944
+                                  ]
+                                }
+                              }
+                            },
+                            "listItems": {
+                              "$id": "#/properties/response/properties/venue/properties/listed/properties/groups/items/properties/items/items/properties/listItems",
+                              "type": "object",
+                              "title": "The Listitems Schema",
+                              "required": [
+                                "count",
+                                "items"
+                              ],
+                              "properties": {
+                                "count": {
+                                  "$id": "#/properties/response/properties/venue/properties/listed/properties/groups/items/properties/items/items/properties/listItems/properties/count",
+                                  "type": "integer",
+                                  "title": "The Count Schema",
+                                  "default": 0,
+                                  "examples": [
+                                    101
+                                  ]
+                                },
+                                "items": {
+                                  "$id": "#/properties/response/properties/venue/properties/listed/properties/groups/items/properties/items/items/properties/listItems/properties/items",
+                                  "type": "array",
+                                  "title": "The Items Schema",
+                                  "items": {
+                                    "$id": "#/properties/response/properties/venue/properties/listed/properties/groups/items/properties/items/items/properties/listItems/properties/items/items",
+                                    "type": "object",
+                                    "title": "The Items Schema",
+                                    "required": [
+                                      "id",
+                                      "createdAt",
+                                      "photo"
+                                    ],
+                                    "properties": {
+                                      "id": {
+                                        "$id": "#/properties/response/properties/venue/properties/listed/properties/groups/items/properties/items/items/properties/listItems/properties/items/items/properties/id",
+                                        "type": "string",
+                                        "title": "The Id Schema",
+                                        "default": "",
+                                        "examples": [
+                                          "t4b67904a70c603bb845291b4"
+                                        ],
+                                        "pattern": "^(.*)$"
+                                      },
+                                      "createdAt": {
+                                        "$id": "#/properties/response/properties/venue/properties/listed/properties/groups/items/properties/items/items/properties/listItems/properties/items/items/properties/createdAt",
+                                        "type": "integer",
+                                        "title": "The Createdat Schema",
+                                        "default": 0,
+                                        "examples": [
+                                          1336747293
+                                        ]
+                                      },
+                                      "photo": {
+                                        "$id": "#/properties/response/properties/venue/properties/listed/properties/groups/items/properties/items/items/properties/listItems/properties/items/items/properties/photo",
+                                        "type": "object",
+                                        "title": "The Photo Schema",
+                                        "required": [
+                                          "id",
+                                          "createdAt",
+                                          "prefix",
+                                          "suffix",
+                                          "width",
+                                          "height",
+                                          "visibility"
+                                        ],
+                                        "properties": {
+                                          "id": {
+                                            "$id": "#/properties/response/properties/venue/properties/listed/properties/groups/items/properties/items/items/properties/listItems/properties/items/items/properties/photo/properties/id",
+                                            "type": "string",
+                                            "title": "The Id Schema",
+                                            "default": "",
+                                            "examples": [
+                                              "4faa9dd9e4b01bd5523d1de8"
+                                            ],
+                                            "pattern": "^(.*)$"
+                                          },
+                                          "createdAt": {
+                                            "$id": "#/properties/response/properties/venue/properties/listed/properties/groups/items/properties/items/items/properties/listItems/properties/items/items/properties/photo/properties/createdAt",
+                                            "type": "integer",
+                                            "title": "The Createdat Schema",
+                                            "default": 0,
+                                            "examples": [
+                                              1336581593
+                                            ]
+                                          },
+                                          "prefix": {
+                                            "$id": "#/properties/response/properties/venue/properties/listed/properties/groups/items/properties/items/items/properties/listItems/properties/items/items/properties/photo/properties/prefix",
+                                            "type": "string",
+                                            "title": "The Prefix Schema",
+                                            "default": "",
+                                            "examples": [
+                                              "https://igx.4sqi.net/img/general/"
+                                            ],
+                                            "pattern": "^(.*)$"
+                                          },
+                                          "suffix": {
+                                            "$id": "#/properties/response/properties/venue/properties/listed/properties/groups/items/properties/items/items/properties/listItems/properties/items/items/properties/photo/properties/suffix",
+                                            "type": "string",
+                                            "title": "The Suffix Schema",
+                                            "default": "",
+                                            "examples": [
+                                              "/KaAuGPKMZev1Te0uucRYHk92RiULGj3-GYWkX_zXbjM.jpg"
+                                            ],
+                                            "pattern": "^(.*)$"
+                                          },
+                                          "width": {
+                                            "$id": "#/properties/response/properties/venue/properties/listed/properties/groups/items/properties/items/items/properties/listItems/properties/items/items/properties/photo/properties/width",
+                                            "type": "integer",
+                                            "title": "The Width Schema",
+                                            "default": 0,
+                                            "examples": [
+                                              720
+                                            ]
+                                          },
+                                          "height": {
+                                            "$id": "#/properties/response/properties/venue/properties/listed/properties/groups/items/properties/items/items/properties/listItems/properties/items/items/properties/photo/properties/height",
+                                            "type": "integer",
+                                            "title": "The Height Schema",
+                                            "default": 0,
+                                            "examples": [
+                                              532
+                                            ]
+                                          },
+                                          "visibility": {
+                                            "$id": "#/properties/response/properties/venue/properties/listed/properties/groups/items/properties/items/items/properties/listItems/properties/items/items/properties/photo/properties/visibility",
+                                            "type": "string",
+                                            "title": "The Visibility Schema",
+                                            "default": "",
+                                            "examples": [
+                                              "public"
+                                            ],
+                                            "pattern": "^(.*)$"
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "phrases": {
+              "$id": "#/properties/response/properties/venue/properties/phrases",
+              "type": "array",
+              "title": "The Phrases Schema",
+              "items": {
+                "$id": "#/properties/response/properties/venue/properties/phrases/items",
+                "type": "object",
+                "title": "The Items Schema",
+                "required": [
+                  "phrase",
+                  "sample",
+                  "count"
+                ],
+                "properties": {
+                  "phrase": {
+                    "$id": "#/properties/response/properties/venue/properties/phrases/items/properties/phrase",
+                    "type": "string",
+                    "title": "The Phrase Schema",
+                    "default": "",
+                    "examples": [
+                      "parque todo"
+                    ],
+                    "pattern": "^(.*)$"
+                  },
+                  "sample": {
+                    "$id": "#/properties/response/properties/venue/properties/phrases/items/properties/sample",
+                    "type": "object",
+                    "title": "The Sample Schema",
+                    "required": [
+                      "entities",
+                      "text"
+                    ],
+                    "properties": {
+                      "entities": {
+                        "$id": "#/properties/response/properties/venue/properties/phrases/items/properties/sample/properties/entities",
+                        "type": "array",
+                        "title": "The Entities Schema",
+                        "items": {
+                          "$id": "#/properties/response/properties/venue/properties/phrases/items/properties/sample/properties/entities/items",
+                          "type": "object",
+                          "title": "The Items Schema",
+                          "required": [
+                            "indices",
+                            "type"
+                          ],
+                          "properties": {
+                            "indices": {
+                              "$id": "#/properties/response/properties/venue/properties/phrases/items/properties/sample/properties/entities/items/properties/indices",
+                              "type": "array",
+                              "title": "The Indices Schema",
+                              "items": {
+                                "$id": "#/properties/response/properties/venue/properties/phrases/items/properties/sample/properties/entities/items/properties/indices/items",
+                                "type": "integer",
+                                "title": "The Items Schema",
+                                "default": 0,
+                                "examples": [
+                                  22,
+                                  33
+                                ]
+                              }
+                            },
+                            "type": {
+                              "$id": "#/properties/response/properties/venue/properties/phrases/items/properties/sample/properties/entities/items/properties/type",
+                              "type": "string",
+                              "title": "The Type Schema",
+                              "default": "",
+                              "examples": [
+                                "keyPhrase"
+                              ],
+                              "pattern": "^(.*)$"
+                            }
+                          }
+                        }
+                      },
+                      "text": {
+                        "$id": "#/properties/response/properties/venue/properties/phrases/items/properties/sample/properties/text",
+                        "type": "string",
+                        "title": "The Text Schema",
+                        "default": "",
+                        "examples": [
+                          "... a ponta, curtir o parque todo, sem pressa, admirando cada lugar. Se puder..."
+                        ],
+                        "pattern": "^(.*)$"
+                      }
+                    }
+                  },
+                  "count": {
+                    "$id": "#/properties/response/properties/venue/properties/phrases/items/properties/count",
+                    "type": "integer",
+                    "title": "The Count Schema",
+                    "default": 0,
+                    "examples": [
+                      4
+                    ]
+                  }
+                }
+              }
+            },
+            "hours": {
+              "$id": "#/properties/response/properties/venue/properties/hours",
+              "type": "object",
+              "title": "The Hours Schema",
+              "required": [
+                "status",
+                "isOpen",
+                "isLocalHoliday",
+                "timeframes"
+              ],
+              "properties": {
+                "status": {
+                  "$id": "#/properties/response/properties/venue/properties/hours/properties/status",
+                  "type": "string",
+                  "title": "The Status Schema",
+                  "default": "",
+                  "examples": [
+                    "Open until 1:00 AM"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "isOpen": {
+                  "$id": "#/properties/response/properties/venue/properties/hours/properties/isOpen",
+                  "type": "boolean",
+                  "title": "The Isopen Schema",
+                  "default": false,
+                  "examples": [
+                    true
+                  ]
+                },
+                "isLocalHoliday": {
+                  "$id": "#/properties/response/properties/venue/properties/hours/properties/isLocalHoliday",
+                  "type": "boolean",
+                  "title": "The Islocalholiday Schema",
+                  "default": false,
+                  "examples": [
+                    false
+                  ]
+                },
+                "timeframes": {
+                  "$id": "#/properties/response/properties/venue/properties/hours/properties/timeframes",
+                  "type": "array",
+                  "title": "The Timeframes Schema",
+                  "items": {
+                    "$id": "#/properties/response/properties/venue/properties/hours/properties/timeframes/items",
+                    "type": "object",
+                    "title": "The Items Schema",
+                    "required": [
+                      "days",
+                      "includesToday",
+                      "open",
+                      "segments"
+                    ],
+                    "properties": {
+                      "days": {
+                        "$id": "#/properties/response/properties/venue/properties/hours/properties/timeframes/items/properties/days",
+                        "type": "string",
+                        "title": "The Days Schema",
+                        "default": "",
+                        "examples": [
+                          "Mon–Sun"
+                        ],
+                        "pattern": "^(.*)$"
+                      },
+                      "includesToday": {
+                        "$id": "#/properties/response/properties/venue/properties/hours/properties/timeframes/items/properties/includesToday",
+                        "type": "boolean",
+                        "title": "The Includestoday Schema",
+                        "default": false,
+                        "examples": [
+                          true
+                        ]
+                      },
+                      "open": {
+                        "$id": "#/properties/response/properties/venue/properties/hours/properties/timeframes/items/properties/open",
+                        "type": "array",
+                        "title": "The Open Schema",
+                        "items": {
+                          "$id": "#/properties/response/properties/venue/properties/hours/properties/timeframes/items/properties/open/items",
+                          "type": "object",
+                          "title": "The Items Schema",
+                          "required": [
+                            "renderedTime"
+                          ],
+                          "properties": {
+                            "renderedTime": {
+                              "$id": "#/properties/response/properties/venue/properties/hours/properties/timeframes/items/properties/open/items/properties/renderedTime",
+                              "type": "string",
+                              "title": "The Renderedtime Schema",
+                              "default": "",
+                              "examples": [
+                                "6:00 AM–1:00 AM"
+                              ],
+                              "pattern": "^(.*)$"
+                            }
+                          }
+                        }
+                      },
+                      "segments": {
+                        "$id": "#/properties/response/properties/venue/properties/hours/properties/timeframes/items/properties/segments",
+                        "type": "array",
+                        "title": "The Segments Schema"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "popular": {
+              "$id": "#/properties/response/properties/venue/properties/popular",
+              "type": "object",
+              "title": "The Popular Schema",
+              "required": [
+                "status",
+                "isOpen",
+                "isLocalHoliday",
+                "timeframes"
+              ],
+              "properties": {
+                "status": {
+                  "$id": "#/properties/response/properties/venue/properties/popular/properties/status",
+                  "type": "string",
+                  "title": "The Status Schema",
+                  "default": "",
+                  "examples": [
+                    "Likely open"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "isOpen": {
+                  "$id": "#/properties/response/properties/venue/properties/popular/properties/isOpen",
+                  "type": "boolean",
+                  "title": "The Isopen Schema",
+                  "default": false,
+                  "examples": [
+                    true
+                  ]
+                },
+                "isLocalHoliday": {
+                  "$id": "#/properties/response/properties/venue/properties/popular/properties/isLocalHoliday",
+                  "type": "boolean",
+                  "title": "The Islocalholiday Schema",
+                  "default": false,
+                  "examples": [
+                    false
+                  ]
+                },
+                "timeframes": {
+                  "$id": "#/properties/response/properties/venue/properties/popular/properties/timeframes",
+                  "type": "array",
+                  "title": "The Timeframes Schema",
+                  "items": {
+                    "$id": "#/properties/response/properties/venue/properties/popular/properties/timeframes/items",
+                    "type": "object",
+                    "title": "The Items Schema",
+                    "required": [
+                      "days",
+                      "open",
+                      "segments"
+                    ],
+                    "properties": {
+                      "days": {
+                        "$id": "#/properties/response/properties/venue/properties/popular/properties/timeframes/items/properties/days",
+                        "type": "string",
+                        "title": "The Days Schema",
+                        "default": "",
+                        "examples": [
+                          "Tue–Thu"
+                        ],
+                        "pattern": "^(.*)$"
+                      },
+                      "open": {
+                        "$id": "#/properties/response/properties/venue/properties/popular/properties/timeframes/items/properties/open",
+                        "type": "array",
+                        "title": "The Open Schema",
+                        "items": {
+                          "$id": "#/properties/response/properties/venue/properties/popular/properties/timeframes/items/properties/open/items",
+                          "type": "object",
+                          "title": "The Items Schema",
+                          "required": [
+                            "renderedTime"
+                          ],
+                          "properties": {
+                            "renderedTime": {
+                              "$id": "#/properties/response/properties/venue/properties/popular/properties/timeframes/items/properties/open/items/properties/renderedTime",
+                              "type": "string",
+                              "title": "The Renderedtime Schema",
+                              "default": "",
+                              "examples": [
+                                "Noon–8:00 PM"
+                              ],
+                              "pattern": "^(.*)$"
+                            }
+                          }
+                        }
+                      },
+                      "segments": {
+                        "$id": "#/properties/response/properties/venue/properties/popular/properties/timeframes/items/properties/segments",
+                        "type": "array",
+                        "title": "The Segments Schema"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "pageUpdates": {
+              "$id": "#/properties/response/properties/venue/properties/pageUpdates",
+              "type": "object",
+              "title": "The Pageupdates Schema",
+              "required": [
+                "count",
+                "items"
+              ],
+              "properties": {
+                "count": {
+                  "$id": "#/properties/response/properties/venue/properties/pageUpdates/properties/count",
+                  "type": "integer",
+                  "title": "The Count Schema",
+                  "default": 0,
+                  "examples": [
+                    12
+                  ]
+                },
+                "items": {
+                  "$id": "#/properties/response/properties/venue/properties/pageUpdates/properties/items",
+                  "type": "array",
+                  "title": "The Items Schema"
+                }
+              }
+            },
+            "inbox": {
+              "$id": "#/properties/response/properties/venue/properties/inbox",
+              "type": "object",
+              "title": "The Inbox Schema",
+              "required": [
+                "count",
+                "items"
+              ],
+              "properties": {
+                "count": {
+                  "$id": "#/properties/response/properties/venue/properties/inbox/properties/count",
+                  "type": "integer",
+                  "title": "The Count Schema",
+                  "default": 0,
+                  "examples": [
+                    0
+                  ]
+                },
+                "items": {
+                  "$id": "#/properties/response/properties/venue/properties/inbox/properties/items",
+                  "type": "array",
+                  "title": "The Items Schema"
+                }
+              }
+            },
+            "venueChains": {
+              "$id": "#/properties/response/properties/venue/properties/venueChains",
+              "type": "array",
+              "title": "The Venuechains Schema"
+            },
+            "attributes": {
+              "$id": "#/properties/response/properties/venue/properties/attributes",
+              "type": "object",
+              "title": "The Attributes Schema",
+              "required": [
+                "groups"
+              ],
+              "properties": {
+                "groups": {
+                  "$id": "#/properties/response/properties/venue/properties/attributes/properties/groups",
+                  "type": "array",
+                  "title": "The Groups Schema",
+                  "items": {
+                    "$id": "#/properties/response/properties/venue/properties/attributes/properties/groups/items",
+                    "type": "object",
+                    "title": "The Items Schema",
+                    "required": [
+                      "type",
+                      "name",
+                      "summary",
+                      "count",
+                      "items"
+                    ],
+                    "properties": {
+                      "type": {
+                        "$id": "#/properties/response/properties/venue/properties/attributes/properties/groups/items/properties/type",
+                        "type": "string",
+                        "title": "The Type Schema",
+                        "default": "",
+                        "examples": [
+                          "payments"
+                        ],
+                        "pattern": "^(.*)$"
+                      },
+                      "name": {
+                        "$id": "#/properties/response/properties/venue/properties/attributes/properties/groups/items/properties/name",
+                        "type": "string",
+                        "title": "The Name Schema",
+                        "default": "",
+                        "examples": [
+                          "Credit Cards"
+                        ],
+                        "pattern": "^(.*)$"
+                      },
+                      "summary": {
+                        "$id": "#/properties/response/properties/venue/properties/attributes/properties/groups/items/properties/summary",
+                        "type": "string",
+                        "title": "The Summary Schema",
+                        "default": "",
+                        "examples": [
+                          "No Credit Cards"
+                        ],
+                        "pattern": "^(.*)$"
+                      },
+                      "count": {
+                        "$id": "#/properties/response/properties/venue/properties/attributes/properties/groups/items/properties/count",
+                        "type": "integer",
+                        "title": "The Count Schema",
+                        "default": 0,
+                        "examples": [
+                          7
+                        ]
+                      },
+                      "items": {
+                        "$id": "#/properties/response/properties/venue/properties/attributes/properties/groups/items/properties/items",
+                        "type": "array",
+                        "title": "The Items Schema",
+                        "items": {
+                          "$id": "#/properties/response/properties/venue/properties/attributes/properties/groups/items/properties/items/items",
+                          "type": "object",
+                          "title": "The Items Schema",
+                          "required": [
+                            "displayName",
+                            "displayValue"
+                          ],
+                          "properties": {
+                            "displayName": {
+                              "$id": "#/properties/response/properties/venue/properties/attributes/properties/groups/items/properties/items/items/properties/displayName",
+                              "type": "string",
+                              "title": "The Displayname Schema",
+                              "default": "",
+                              "examples": [
+                                "Credit Cards"
+                              ],
+                              "pattern": "^(.*)$"
+                            },
+                            "displayValue": {
+                              "$id": "#/properties/response/properties/venue/properties/attributes/properties/groups/items/properties/items/items/properties/displayValue",
+                              "type": "string",
+                              "title": "The Displayvalue Schema",
+                              "default": "",
+                              "examples": [
+                                "No"
+                              ],
+                              "pattern": "^(.*)$"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "bestPhoto": {
+              "$id": "#/properties/response/properties/venue/properties/bestPhoto",
+              "type": "object",
+              "title": "The Bestphoto Schema",
+              "required": [
+                "id",
+                "createdAt",
+                "source",
+                "prefix",
+                "suffix",
+                "width",
+                "height",
+                "visibility"
+              ],
+              "properties": {
+                "id": {
+                  "$id": "#/properties/response/properties/venue/properties/bestPhoto/properties/id",
+                  "type": "string",
+                  "title": "The Id Schema",
+                  "default": "",
+                  "examples": [
+                    "513bd223e4b0e8ef8292ee54"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "createdAt": {
+                  "$id": "#/properties/response/properties/venue/properties/bestPhoto/properties/createdAt",
+                  "type": "integer",
+                  "title": "The Createdat Schema",
+                  "default": 0,
+                  "examples": [
+                    1362874915
+                  ]
+                },
+                "source": {
+                  "$id": "#/properties/response/properties/venue/properties/bestPhoto/properties/source",
+                  "type": "object",
+                  "title": "The Source Schema",
+                  "required": [
+                    "name",
+                    "url"
+                  ],
+                  "properties": {
+                    "name": {
+                      "$id": "#/properties/response/properties/venue/properties/bestPhoto/properties/source/properties/name",
+                      "type": "string",
+                      "title": "The Name Schema",
+                      "default": "",
+                      "examples": [
+                        "Instagram"
+                      ],
+                      "pattern": "^(.*)$"
+                    },
+                    "url": {
+                      "$id": "#/properties/response/properties/venue/properties/bestPhoto/properties/source/properties/url",
+                      "type": "string",
+                      "title": "The Url Schema",
+                      "default": "",
+                      "examples": [
+                        "http://instagram.com"
+                      ],
+                      "pattern": "^(.*)$"
+                    }
+                  }
+                },
+                "prefix": {
+                  "$id": "#/properties/response/properties/venue/properties/bestPhoto/properties/prefix",
+                  "type": "string",
+                  "title": "The Prefix Schema",
+                  "default": "",
+                  "examples": [
+                    "https://igx.4sqi.net/img/general/"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "suffix": {
+                  "$id": "#/properties/response/properties/venue/properties/bestPhoto/properties/suffix",
+                  "type": "string",
+                  "title": "The Suffix Schema",
+                  "default": "",
+                  "examples": [
+                    "/655018_Zp3vA90Sy4IIDApvfAo5KnDItoV0uEDZeST7bWT-qzk.jpg"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "width": {
+                  "$id": "#/properties/response/properties/venue/properties/bestPhoto/properties/width",
+                  "type": "integer",
+                  "title": "The Width Schema",
+                  "default": 0,
+                  "examples": [
+                    612
+                  ]
+                },
+                "height": {
+                  "$id": "#/properties/response/properties/venue/properties/bestPhoto/properties/height",
+                  "type": "integer",
+                  "title": "The Height Schema",
+                  "default": 0,
+                  "examples": [
+                    612
+                  ]
+                },
+                "visibility": {
+                  "$id": "#/properties/response/properties/venue/properties/bestPhoto/properties/visibility",
+                  "type": "string",
+                  "title": "The Visibility Schema",
+                  "default": "",
+                  "examples": [
+                    "public"
+                  ],
+                  "pattern": "^(.*)$"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

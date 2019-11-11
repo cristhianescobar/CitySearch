@@ -22,4 +22,10 @@
         <item name="android:layout_margin">1dp</item>
         <item name="layout_constraintDimensionRatio">1:.53</item>
     </style>
+
+
+    <style name="Title" parent="TextAppearance.AppCompat.Title">
+
+    </style>
+
 </resources>

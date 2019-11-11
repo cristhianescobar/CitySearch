@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.citysearch.SearchResultsFragment">
+    tools:context=".ui.citysearch.SearchListResultsFragment">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/list"
@@ -18,7 +18,7 @@
         tools:listitem="@layout/fragment_venue" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/search_fab"
+        android:id="@+id/map_fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"

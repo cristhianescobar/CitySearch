@@ -2,7 +2,9 @@ package com.cristhianescobar.citysearch.api.webservice
 
 import com.cristhianescobar.codegen.ws.models.typeahead.SuggestedResponse
 import com.cristhianescobar.codegen.ws.models.typeahead.VenuesResponse
+import com.cristhianescobar.codegen.ws.models.venueDetails.VenueDetailsResponse
 import retrofit2.http.GET
+import retrofit2.http.Path
 import retrofit2.http.Query
 
 interface VenuesServiceAPI {
@@ -30,6 +32,14 @@ interface VenuesServiceAPI {
         @Query("query") searchWord: String,
         @Query("v") versioning: String
     ): SuggestedResponse
+
+    @GET("v2/venues/{venueId}")
+    suspend fun getVenueDetails(
+        @Path("venueId") venueId : String,
+        @Query("client_id") clientId: String,
+        @Query("client_secret") clientSecret: String,
+        @Query("v") versioning: String
+    ): VenueDetailsResponse
 
 
 }

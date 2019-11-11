@@ -1,14 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".ui.citysearch.VenueDetailFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ImageView
+        android:id="@+id/heroImage"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="200dp"
+        style="@style/ImageHome"/>
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/details_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="Title"
+        android:layout_margin="16dp"
+        android:gravity="center"
+        style="@style/TextAppearance.AppCompat.Headline"/>
+
+    <TextView
+        android:id="@+id/details_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        tools:text="Address"
+        android:gravity="center"
+        style="@style/TextAppearance.MaterialComponents.Body1"/>
+
+    <TextView
+        android:id="@+id/details_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        tools:text="A lot of details "
+        android:gravity="center"
+        style="@style/TextAppearance.MaterialComponents.Body2"
+        />
+
+</LinearLayout>
