@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/home_dest">
+
+    <fragment
+        android:id="@+id/home_dest"
+        android:name="com.cristhianescobar.citysearch.ui.citysearch.HomeFragment"
+        android:label="@string/home"
+        tools:layout="@layout/home_fragment">
+        <action
+            android:id="@+id/action_home_dest_to_venueFragment"
+            app:destination="@id/type_ahead_dest"
+            app:enterAnim="@anim/slide_up"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/type_ahead_dest"
+        android:name="com.cristhianescobar.citysearch.ui.citysearch.TypeAheadFragment"
+        android:label="VenueFragment" >
+        <action
+            android:id="@+id/action_type_ahead_dest_to_displayNearByPlacesFragment"
+            app:destination="@id/display_nearby_places_dest" />
+    </fragment>
+    <fragment
+        android:id="@+id/display_nearby_places_dest"
+        android:name="com.cristhianescobar.citysearch.ui.citysearch.SearchResultsFragment"
+        android:label="fragment_display_near_by_places"
+        tools:layout="@layout/fragment_display_near_by_places" >
+        <action
+            android:id="@+id/action_display_nearby_places_dest_to_venueDetailFragment"
+            app:destination="@id/venue_details_dest" />
+    </fragment>
+    <fragment
+        android:id="@+id/venue_details_dest"
+        android:name="com.cristhianescobar.citysearch.ui.citysearch.VenueDetailFragment"
+        android:label="fragment_venue_detail"
+        tools:layout="@layout/fragment_venue_detail" />
+</navigation>

@@ -8,14 +8,8 @@ import android.widget.ImageView
 import android.widget.TextView
 import com.bumptech.glide.Glide
 import com.cristhianescobar.citysearch.R
-import com.cristhianescobar.citysearch.api.domain.Venue
-import com.cristhianescobar.citysearch.extensions.getImageUrl
 import com.cristhianescobar.citysearch.extensions.getMainImageUrl
-
-
-import com.cristhianescobar.citysearch.ui.citysearch.VenueFragment.OnListFragmentInteractionListener
-import com.cristhianescobar.codegen.ws.models.typeahead.Minivenue
-import kotlinx.android.synthetic.main.city_search_fragment.*
+import com.cristhianescobar.codegen.ws.models.typeahead.Venue
 
 import kotlinx.android.synthetic.main.fragment_venue.view.*
 
@@ -26,22 +20,19 @@ import kotlinx.android.synthetic.main.fragment_venue.view.*
  */
 class VenueRecyclerViewAdapter(
     private var mValues: List<Venue>,
-    private val mListener: OnListFragmentInteractionListener?
+    private val mListener: OnPlaceClickedListener?
 ) : RecyclerView.Adapter<VenueRecyclerViewAdapter.ViewHolder>() {
 
     private val mOnClickListener: View.OnClickListener
 
     init {
         mOnClickListener = View.OnClickListener { v ->
-            val item = v.tag as Venue
-            // Notify the active callbacks interface (the activity, if the fragment is attached to
-            // one) that an item has been selected.
-            mListener?.onListFragmentInteraction(item)
+            mListener?.onVenueClick(v.tag as Venue)
         }
     }
 
-    fun addVenues(minivenue: List<Venue>) {
-        mValues = minivenue
+    fun addVenues(venues: List<Venue>) {
+        mValues = venues
         notifyDataSetChanged()
     }
 
@@ -52,14 +43,8 @@ class VenueRecyclerViewAdapter(
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val item = mValues[position]
-        Glide.with(holder.mView.context)
-            .load(item.imageUrl)
-            .into(holder.mIdView)
-        holder.mContentView.text = item.name
-
+        holder.bind(mValues[position])
         with(holder.mView) {
-            tag = item
             setOnClickListener(mOnClickListener)
         }
     }
@@ -67,11 +52,12 @@ class VenueRecyclerViewAdapter(
     override fun getItemCount(): Int = mValues.size
 
     inner class ViewHolder(val mView: View) : RecyclerView.ViewHolder(mView) {
-        val mIdView: ImageView = mView.image
-        val mContentView: TextView = mView.content
-
-        override fun toString(): String {
-            return super.toString() + " '" + mContentView.text + "'"
+        fun bind(venue: Venue) {
+            Glide.with(mView.context)
+                .load(venue.categories.getMainImageUrl())
+                .into(mView.image)
+            mView.content.text = venue.name
+            mView.tag = venue
         }
     }
 }
