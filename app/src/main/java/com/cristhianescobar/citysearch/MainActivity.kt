@@ -8,20 +8,20 @@ import android.widget.Toast
 import androidx.appcompat.widget.SearchView
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
-import com.cristhianescobar.citysearch.extensions.log
 import kotlinx.android.synthetic.main.city_search_activity.*
 import androidx.annotation.RequiresApi
 import androidx.lifecycle.ViewModelProviders
-import com.cristhianescobar.citysearch.extensions.collapse
-import com.cristhianescobar.citysearch.extensions.expand
-import com.cristhianescobar.citysearch.extensions.hideKeyboard
+import androidx.lifecycle.viewModelScope
+import com.cristhianescobar.citysearch.extensions.*
+import com.cristhianescobar.citysearch.extensions.Debounce.debounce
+
 import com.cristhianescobar.citysearch.ui.citysearch.CitySearchViewModel
 
 
 class MainActivity : AppCompatActivity(), SearchView.OnQueryTextListener, View.OnClickListener {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
-    private lateinit var viewModel : CitySearchViewModel
+    private lateinit var viewModel: CitySearchViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -40,30 +40,26 @@ class MainActivity : AppCompatActivity(), SearchView.OnQueryTextListener, View.O
             setIconifiedByDefault(false) // Do not iconify the widget; expand it by default
             setOnQueryTextListener(this@MainActivity)
             setOnClickListener(this@MainActivity)
+
         }
-
         viewModel = ViewModelProviders.of(this).get(CitySearchViewModel::class.java)
-
-
     }
 
-    @RequiresApi(Build.VERSION_CODES.O)
     override fun onQueryTextSubmit(query: String?): Boolean {
         query?.let {
             toolbar_search.setQuery(query, true)
-            viewModel.getSuggestedVenues(searchWord = it)
-
+            viewModel.getSuggestions(searchWord = it)
             hideKeyboard()
         }
         return true
     }
 
     override fun onQueryTextChange(newText: String?): Boolean {
-        "onQueryTextChange: newText -> $newText".log()
-        Toast.makeText(this, "change $newText", Toast.LENGTH_SHORT).show()
         newText?.let {
-            if(newText.length > 3) {
-                viewModel.getSuggestedVenues(searchWord = it)
+            if (newText.length >= 3) {
+                viewModel.viewModelScope.debounce(1000) {
+                    viewModel.getSuggestions(searchWord = it)
+                }
             }
 
         }
@@ -78,9 +74,10 @@ class MainActivity : AppCompatActivity(), SearchView.OnQueryTextListener, View.O
         toolbar_search.collapse()
     }
 
-    fun setTitle(title : String) {
+    fun setTitle(title: String) {
         toolbar.title = title
     }
+
     override fun onClick(v: View?) {
         "onClick".log()
         when (v?.id) {

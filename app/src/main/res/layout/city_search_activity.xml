@@ -15,18 +15,13 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@android:color/white"
-            android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar"
-            app:titleTextColor="@android:color/black">
-
-        </androidx.appcompat.widget.Toolbar>
-
+            app:elevation="8dp"
+            />
         <androidx.appcompat.widget.SearchView
             android:id="@+id/toolbar_search"
             android:layout_width="match_parent"
             android:layout_height="56dp"
             android:icon="@drawable/ic_search"
-            android:background="@color/backgroundColor"
             android:layout_margin="10dp"
             android:visibility="gone"
             android:title="@string/app_name" />

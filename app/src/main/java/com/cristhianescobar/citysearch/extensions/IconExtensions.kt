@@ -20,6 +20,11 @@ fun com.cristhianescobar.codegen.ws.models.venueDetails.Venue.getBestImage(): St
 
 
 fun com.cristhianescobar.codegen.ws.models.venueDetails.Photos.getPhoto(): String {
-    return (groups[0].items[0].prefix + "300x500" + groups[0].items[0].suffix)
+    try {
+        return (groups[0].items[0].prefix + "300x500" + groups[0].items[0].suffix) ?: ""
+
+    } catch (e: Exception) {
+        return "https://media.giphy.com/media/OiC5BKaPVLl60/giphy.gif"
+    }
 }
 

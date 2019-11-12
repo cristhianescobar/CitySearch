@@ -84,9 +84,4 @@ class VenueDetailFragment : Fragment() {
             }
         })
     }
-
-    override fun onStop() {
-        super.onStop()
-    }
-
 }

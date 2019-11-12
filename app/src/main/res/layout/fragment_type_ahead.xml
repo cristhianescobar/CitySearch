@@ -5,18 +5,32 @@
     android:id="@+id/citysearch"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.citysearch.TypeAheadFragment"
-    >
+    tools:context=".ui.citysearch.TypeAheadFragment">
+
+    <TextView
+        android:id="@+id/suggested_search_textview"
+        style="@style/TextAppearance.AppCompat.Title"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:text="Suggested Searches"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/list"
         android:name="com.cristhianescobar.citysearch.ui.citysearch.venueFragment"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         app:layoutManager="LinearLayoutManager"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/suggested_search_textview"
         tools:listitem="@layout/fragment_venue" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

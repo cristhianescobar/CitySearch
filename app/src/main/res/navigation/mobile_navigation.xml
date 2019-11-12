@@ -17,6 +17,13 @@
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_home_dest_to_display_nearby_places_dest"
+            app:destination="@id/display_nearby_places_dest"
+            app:enterAnim="@anim/slide_up"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
 
     <fragment
@@ -25,8 +32,13 @@
         android:label="VenueFragment" >
         <action
             android:id="@+id/action_type_ahead_dest_to_displayNearByPlacesFragment"
-            app:destination="@id/display_nearby_places_dest" />
+            app:destination="@id/display_nearby_places_dest"
+            app:enterAnim="@anim/slide_up"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
     </fragment>
+
     <fragment
         android:id="@+id/display_nearby_places_dest"
         android:name="com.cristhianescobar.citysearch.ui.citysearch.SearchListResultsFragment"
@@ -34,10 +46,16 @@
         tools:layout="@layout/fragment_display_near_by_places" >
         <action
             android:id="@+id/action_display_nearby_places_dest_to_venueDetailFragment"
-            app:destination="@id/venue_details_dest" />
+            app:destination="@id/venue_details_dest"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
         <action
             android:id="@+id/action_display_nearby_places_dest_to_searchMapResults"
-            app:destination="@id/search_map_results_dest" />
+            app:destination="@id/search_map_results_dest"
+            app:enterAnim="@anim/slide_out_left"
+            app:launchSingleTop="true" />
     </fragment>
     <fragment
         android:id="@+id/venue_details_dest"
@@ -47,5 +65,13 @@
     <fragment
         android:id="@+id/search_map_results_dest"
         android:name="com.cristhianescobar.citysearch.ui.citysearch.SearchMapResults"
-        android:label="SearchMapResults" />
+        android:label="SearchMapResults" >
+        <action
+            android:id="@+id/action_search_map_results_dest_to_venue_details_dest"
+            app:destination="@id/venue_details_dest" />
+        <action
+            android:id="@+id/action_search_map_results_dest_to_display_nearby_places_dest"
+            app:destination="@id/display_nearby_places_dest"
+            app:launchSingleTop="false" />
+    </fragment>
 </navigation>

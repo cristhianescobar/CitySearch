@@ -9,6 +9,7 @@ import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.cristhianescobar.citysearch.MainActivity
 import com.cristhianescobar.citysearch.api.Result
@@ -48,6 +49,7 @@ class SearchListResultsFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
         with(list) {
             layoutManager = LinearLayoutManager(context)
             adapter = venueRecyclerViewAdapter

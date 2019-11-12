@@ -9,9 +9,8 @@ import com.cristhianescobar.citysearch.api.repository.VenuesRepository
 import kotlinx.coroutines.launch
 import org.koin.android.ext.android.inject
 import com.cristhianescobar.citysearch.api.Result
-import com.cristhianescobar.codegen.ws.models.typeahead.SuggestedResponse
 import com.cristhianescobar.codegen.ws.models.typeahead.Venue
-import com.cristhianescobar.codegen.ws.models.typeahead.VenuesResponse
+import kotlinx.coroutines.Dispatchers
 
 class CitySearchViewModel(application: Application) : AndroidViewModel(application) {
     /* Dependency Injections */
@@ -34,23 +33,23 @@ class CitySearchViewModel(application: Application) : AndroidViewModel(applicati
         get() = _suggestedSearchTerms
 
     /* ViewModel set methods */
-    fun getVenuesNear(place: String = "Seattle,+WA", query: String = "coffee") {
+    fun getVenuesNear(place: String = "Seattle,+WA", query: String) {
         _searchedTerm.value = query
-        viewModelScope.launch {
+        viewModelScope.launch(Dispatchers.IO) {
             val venuesNearBy = searchVenuesRepository.getVenuesNearBy(place, query)
             _nearByVenues.postValue(venuesNearBy)
         }
     }
 
-    fun getSuggestedVenues(near: String = "Seattle,+WA", searchWord: String) {
-        viewModelScope.launch {
-            val suggestedSearch = searchVenuesRepository.getSuggestedVenues(near, searchWord)
+    fun getSuggestions(near: String = "Seattle,+WA", searchWord: String) {
+        viewModelScope.launch(Dispatchers.IO) {
+            val suggestedSearch = searchVenuesRepository.getSuggestions(near, searchWord)
             _suggestedSearchTerms.postValue(suggestedSearch)
         }
     }
 
     fun setVenueSelected(venueId : String) {
-        viewModelScope.launch {
+        viewModelScope.launch(Dispatchers.IO) {
             val venueDetails = searchVenuesRepository.getVenueDetails(venueId)
             _selectedVenue.postValue(venueDetails)
         }

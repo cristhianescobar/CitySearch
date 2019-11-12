@@ -7,7 +7,7 @@ import com.cristhianescobar.codegen.ws.models.typeahead.VenuesResponse
 
 interface VenuesRepository {
     suspend fun getVenuesNearBy(place: String, query: String): Result<List<Venue>>
-    suspend fun getSuggestedVenues(near: String, query: String): Result<List<Venue>>
+    suspend fun getSuggestions(near: String, query: String): Result<List<Venue>>
     suspend fun getVenueDetails(venueId: String): Result<com.cristhianescobar.codegen.ws.models.venueDetails.Venue>
 
 }
